@@ -17,148 +17,338 @@
         
         h1 {
             font-size: 2.5em;
-            margin-bottom: 0.2em;
+            margin-bottom: 0.01em;
             font-weight: 300;
         }
-        
+
         h2 {
             font-size: 1.2em;
             color: #666;
             font-weight: normal;
-            margin-bottom: 1.5em;
+            margin-top: 0;
+            margin-bottom: 0.4em;
         }
-        
+        .tight {
+            margin-bottom: 0.1em;
+        }
+
         h3 {
             font-size: 1.4em;
             margin-top: 2em;
             margin-bottom: 1em;
         }
-        
-        .timeline {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .timeline li {
-            margin-bottom: 1.5em;
-            padding-left: 0;
-        }
-        
-        .range {
-            color: #666;
-            font-size: 0.9em;
-            margin-right: 1em;
-        }
-        
+
         details {
             margin-top: 0.5em;
+            margin-left: 56px;
         }
-        
+
         summary {
             cursor: pointer;
             color: #666;
             font-size: 0.9em;
         }
-        
+
         summary:hover {
             color: #333;
         }
-        
+
         details p {
             margin-top: 0.5em;
             padding-left: 1em;
-            border-left: 2px solid #eee;
         }
-        
+
         .mini {
             padding-left: 1em;
         }
-        
+
         .mini li {
             margin-bottom: 0.3em;
         }
-        
+
         a {
             color: #333;
             text-decoration: underline;
         }
-        
+
         a:hover {
             color: #000;
+        }
+
+        .intro{
+            display:flex;
+            align-items:flex-start;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+        .intro-photo{
+            flex:0 0 180px;
+            width:180px;
+            height:180px;
+            object-fit:cover;
+            border-radius:50%;
+            background:#eee;
+        }
+        .intro-text{
+            flex:1 1 300px;
+        }
+        .intro-right{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:20px;
+            margin-top: 40px;
+        }
+
+        .divider{
+            width:100%;
+            height:1px;
+            background:#ddd;
+            margin:40px 0;
+        }
+
+        .timeline{
+            position:relative;
+            padding-left:160px;
+            list-style:none;
+        }
+        .timeline::before{
+            content:"";
+            position:absolute;
+            left:140px;
+            top:0;
+            bottom:0;
+            width:1px;
+            background:#ccc;
+        }
+        .timeline li{
+            position:relative;
+            margin-bottom:2em;
+        }
+        .timeline li::before{
+            content:"";
+            position:absolute;
+            left:-26px;
+            top:0.4em;
+            width:6px;
+            height:6px;
+            border-radius:50%;
+            background:#666;
+        }
+        .timeline .range{
+            position:absolute;
+            left:-150px;
+            width:120px;
+            text-align:right;
+            color:#666;
+            font-size:0.9em;
+            top:0;
+            margin-right:0;
+            white-space:pre-line;
+        }
+        .job-header{
+            display:flex;
+            align-items:flex-start;
+            gap:16px;
+            margin-bottom:8px;
+        }
+        .company-logo{
+            width:40px;
+            height:40px;
+            object-fit:contain;
+            border-radius:4px;
+            flex-shrink:0;
+        }
+        .job-content{
+            flex:1;
+        }
+        .company-name{
+            font-size:1.1em;
+            font-weight:600;
+            color:#333;
+            text-decoration:none;
+            margin-bottom:4px;
+            display:block;
+        }
+        .company-name:hover{
+            color:#000;
+            text-decoration:underline;
+        }
+        .job-title{
+            font-weight:500;
+            margin-bottom:8px;
+            color:#333;
+        }
+        .social-links{
+            display:flex;
+            gap:16px;
+            margin-bottom:20px;
+        }
+        .social-links a{
+            display:inline-block;
+            width:24px;
+            height:24px;
+            opacity:0.7;
+            transition:opacity 0.2s;
+            text-decoration:none;
+        }
+        .social-links a:hover{
+            opacity:1;
+        }
+        ul.bullet-tight {
+            margin-top: 0.2em;   /* reduce from default ~1em */
+            margin-bottom: 0.7em; /* optional: keep some bottom gap */
+            padding-left: 2.3em;  /* optional: adjust bullet indent */
+        }
+        ul.bullet-tight li {
+            margin-bottom: 0.2em; /* tighter gap between bullets */
+        }
+        @media (max-width: 600px) {
+            .intro {
+                gap: 24px;
+            }
+            .intro-right {
+                margin-top: 0;
+                gap: 12px;
+                align-items: center; /* ensures children (image, links) are centered horizontally */
+            }
+            .intro-photo {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%; /* ensure round shape on small screens */
+                object-fit: cover;  /* just in case */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Dragutin Oreški</h1>
-    <h2>AI & Data Engineer · Multi-agent & RAG specialist</h2>
+    <section class="intro">
+        <div class="intro-text">
+            <h1>Dragutin Oreški</h1>
+            <h2>AI Engineer</h2>
 
-    <p>
-        I build privacy-first AI systems that turn raw text into business decisions.
-        Recent playgrounds: self-hosted <em>Llama 3</em>, Retrieval-Augmented
-        Generation, and multi-agent orchestration with <em>LangGraph</em>.
-    </p>
+            <p>
+                I build practical AI systems that unlock value from the data.
+            </p>
+            <p class="tight">Lately, I've been into:</p>
+            <ul class="bullet-tight">
+                <li>Leveraging the latest Context Engineering trends via <em>LangGraph</em></li>
+                <li>Self-hosting <em>Llama</em> models using speculative decoding and caching optimizations</li>
+            </ul>
+        </div>
+        <div class="intro-right">
+            <img src="img/profile_head.jpg" alt="Your headshot" class="intro-photo">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dragutinoreski" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/dragutin-oreski" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="mailto:dragutin.oreski@gmail.com" title="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.796L12 11.582 21.568 3.82h.796c.904 0 1.636.733 1.636 1.637z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <h3>Timeline</h3>
+    <div class="divider"></div>
     <ul class="timeline">
         <li>
-            <span class="range">Dec 2024 – Present</span>
-            <strong>Lead AI Engineer — QED Code</strong>
+            <span class="range">Dec 2024 –</span>
+            <div class="job-header">
+                <img src="img/logos/qed_logo.jpg" alt="QED Code logo" class="company-logo">
+                <div class="job-content">
+                    <a href="https://qedcode.io" class="company-name">QED Code</a>
+                    <div class="job-title">Lead AI Engineer</div>
+                </div>
+            </div>
             <details>
-                <summary>More ▸</summary>
+                <summary>Leading government-grade, privacy-focused RAG + multi-agent platform.</summary>
                 <p>
-                    Leading a government-grade, on-prem RAG platform.<br>
-                    • Designed a LangGraph multi-agent layer that converts documents into
-                    domain objects for custom apps.<br>
-                    • Switched to self-hosted Llama 3-70B, cutting inference cost 60%.<br>
-                    • Wired full observability with Langfuse and Grafana.
-                </p>
-
-                <h4>Month-in-Review</h4>
-                <ul class="mini">
-                    <li><strong>Jul 2025</strong> – Open-sourced our prompt-audit toolkit</li>
-                    <li><strong>Jun 2025</strong> – Spoke at ML Ops World (Toronto)</li>
-                    <li><strong>May 2025</strong> – Delivered PoC for National Statistics Bureau</li>
-                </ul>
-            </details>
-        </li>
-
-        <li>
-            <span class="range">Sep 2023 – Nov 2024</span>
-            <strong>Lead Data Engineer — Freelance (Top 3% Upwork)</strong>
-            <details>
-                <summary>More ▸</summary>
-                <p>
-                    • Migrated BI pipelines to dbt + Snowflake for a 9-TB dataset.<br>
-                    • Built AI chatbots: "Chat with Nikola" and an AI Therapist (CBT).<br>
-                    • Led a distributed team of 5 engineers.
+                    • Designed a LangGraph multi-agent system for generating project breakdowns from private customer documents.<br>
+                    • Developed a private RAG platform for secure document chat and agentic workflows.<br>
+                    • Optimized self-hosting of Llama models for high performance and cost efficiency.<br>
+                    • Implemented Langfuse for observability and DeepEval for evaluation.
                 </p>
             </details>
         </li>
 
         <li>
-            <span class="range">Aug 2017 – Sep 2023</span>
-            <strong>Data Engineer / Scientist — CIAL Dun & Bradstreet</strong>
+            <span class="range">Mar 2024 –
+Dec 2024</span>
+            <div class="job-header">
+                <img src="img/logos/upwork_logo.png" alt="Upwork logo" class="company-logo">
+                <div class="job-content">
+                    <a href="https://www.upwork.com/freelancers/dragutino" class="company-name">Freelancer</a>
+                    <div class="job-title">AI Engineer (Top 3% Upwork)</div>
+                </div>
+            </div>
             <details>
-                <summary>More ▸</summary>
+                <summary>Built custom RAG and multi-agent systems</summary>
                 <p>
-                    Designed distributed ELT pipelines and tackled company-matching with
-                    NLP across Latin-American markets. Mentored new hires and set up the
-                    team's Prefect + Kafka stack.
+                    • Built AI chatbots:<br>
+                    <span style="display:block; padding-left:2em;">• Storyteller – Custom children’s story generator</span>
+                    <span style="display:block; padding-left:2em;">• "Chat with Nikola" – Virtual Nikola Tesla chatbot</span>
+                    <span style="display:block; padding-left:2em;">• AI Therapist (CBT) – Automated CBT-based anxiety relief</span>
+                    • Designed AI-based product matching system<br>
+                	• Developed a simulation engine that allows game providers to test and optimize betting game parameters through outcome forecasting.<br>
+                    • Designed and deployed conversational AI solutions using Dialogflow.<br>
+                    • Built a scalable video creation tool for generating custom videos and automating large-scale greenscreen overlays.<br>
                 </p>
             </details>
         </li>
 
+
+    <li>
+        <span class="range">Sep 2023 –
+            Mar 2024</span>
+        <div class="job-header">
+            <img src="img/logos/upp_logo.png" alt="Upp Agency logo" class="company-logo">
+            <div class="job-content">
+                <span class="company-name">Upp Agency</span>
+                <div class="job-title">Co-founder</div>
+            </div>
+        </div>
+        <details>
+            <summary>Co-founded an agency focused on AI & Data Engineering</summary>
+            <p>
+                • Led a team of 5 engineers in maintaining and improving data pipelines and dashboards.<br>
+                • Designed and migrated infrastructure to dbt, Snowflake, Prefect, and Kubernetes.<br>
+            </p>
+        </details>
+    </li>
+
+
         <li>
-            <span class="range">Oct 2016 – Dec 2016</span>
-            <strong>English Teacher — Malang, Indonesia</strong>
+            <span class="range">Aug 2017 –
+Sep 2023</span>
+            <div class="job-header">
+                <img src="img/logos/cial_logo.png" alt="CIAL logo" class="company-logo">
+                <div class="job-content">
+                    <a href="https://cialdnb.com" class="company-name">CIAL Dun & Bradstreet</a>
+                    <div class="job-title">Data Engineer / Scientist</div>
+                </div>
+            </div>
+            <details>
+                <summary>Designed distributed ELT pipelines and NLP solutions for Latin-American markets.</summary>
+                <p>
+                    • Developed automated data processing pipelines and analytics for business use cases.<br>
+                    • Implemented NLP-based entity and company matching solutions.<br>
+                    • Mentored new hires and established team processes.<br>
+                </p>
+            </details>
         </li>
     </ul>
 
-    <h3>Connect</h3>
-    <p>
-        <a href="https://www.linkedin.com/in/dragutinoreski">LinkedIn</a> ·
-        <a href="https://github.com/dragutin-oreski">GitHub</a> ·
-        <a href="mailto:dragutin.oreski@gmail.com">Email</a>
-    </p>
 </body>
 </html>

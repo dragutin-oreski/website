@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)http://localhost:63342/website/index.html?_ijt=47gpb2o0u339bj2ataeh82ehdg&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragutin Oreški</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: white;
+            color: #333;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.01em;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #666;
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 0.4em;
+        }
+        .tight {
+            margin-bottom: 0.1em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+
+        details {
+            margin-top: 0.5em;
+            margin-left: 56px;
+        }
+
+        summary {
+            cursor: pointer;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        summary:hover {
+            color: #333;
+        }
+
+        details p {
+            margin-top: 0.5em;
+            padding-left: 1em;
+        }
+
+        .mini {
+            padding-left: 1em;
+        }
+
+        .mini li {
+            margin-bottom: 0.3em;
+        }
+
+        a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        .intro{
+            display:flex;
+            align-items:center;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+        .intro-photo{
+            flex:0 0 180px;
+            width:180px;
+            height:180px;
+            object-fit:cover;
+            border-radius:50%;
+            background:#eee;
+        }
+        .intro-text{
+            flex:1 1 300px;
+        }
+
+        .divider{
+            width:100%;
+            height:1px;
+            background:#ddd;
+            margin:40px 0;
+        }
+
+        .timeline{
+            position:relative;
+            padding-left:160px;
+            list-style:none;
+        }
+        .timeline::before{
+            content:"";
+            position:absolute;
+            left:140px;
+            top:0;
+            bottom:0;
+            width:1px;
+            background:#ccc;
+        }
+        .timeline li{
+            position:relative;
+            margin-bottom:2em;
+        }
+        .timeline li::before{
+            content:"";
+            position:absolute;
+            left:-26px;
+            top:0.4em;
+            width:6px;
+            height:6px;
+            border-radius:50%;
+            background:#666;
+        }
+        .timeline .range{
+            position:absolute;
+            left:-150px;
+            width:120px;
+            text-align:right;
+            color:#666;
+            font-size:0.9em;
+            top:0;
+            margin-right:0;
+            white-space:pre-line;
+        }
+        .job-header{
+            display:flex;
+            align-items:flex-start;
+            gap:16px;
+            margin-bottom:8px;
+        }
+        .company-logo{
+            width:40px;
+            height:40px;
+            object-fit:contain;
+            border-radius:4px;
+            flex-shrink:0;
+        }
+        .job-content{
+            flex:1;
+        }
+        .company-name{
+            font-size:1.1em;
+            font-weight:600;
+            color:#333;
+            text-decoration:none;
+            margin-bottom:4px;
+            display:block;
+        }
+        .company-name:hover{
+            color:#000;
+            text-decoration:underline;
+        }
+        .job-title{
+            font-weight:500;
+            margin-bottom:8px;
+            color:#333;
+        }
+        .social-links{
+            display:flex;
+            gap:16px;
+            margin-bottom:20px;
+        }
+        .social-links a{
+            display:inline-block;
+            width:24px;
+            height:24px;
+            opacity:0.7;
+            transition:opacity 0.2s;
+            text-decoration:none;
+        }
+        .social-links a:hover{
+            opacity:1;
+        }
+    </style>
+<link type="image/x-icon" rel="shortcut icon" href="data:image/x-icon;base64,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"></head>
+<body data-new-gr-c-s-check-loaded="14.1246.0" data-gr-ext-installed="" data-gr-ext-disabled="forever">
+    <section class="intro">
+        <div class="intro-text">
+            <h1>Dragutin Oreški</h1>
+            <h2>AI Engineer</h2>
+
+            <p>
+                I build practical AI systems that unlock value from the data.
+            </p>
+            <p class="tight">Lately, I've been into:</p>
+            <ul class="bullet-tight">
+                <li>Leveraging the latest Context Engineering trends via <em>LangGraph</em></li>
+                <li>Self-hosting <em>Llama</em> models using speculative decoding and caching optimizations</li>
+            </ul>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dragutinoreski" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                    </svg>
+                </a>
+                <a href="https://github.com/dragutin-oreski" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                </a>
+                <a href="mailto:dragutin.oreski@gmail.com" title="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.796L12 11.582 21.568 3.82h.796c.904 0 1.636.733 1.636 1.637z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <img src="./Dragutin Oreški_files/profile_head.jpg" alt="Your headshot" class="intro-photo">
+    </section>
+
+    <div class="divider"></div>
+    <ul class="timeline">
+        <li>
+            <span class="range">Dec 2024 –
+Present</span>
+            <div class="job-header">
+                <img src="./Dragutin Oreški_files/qed_logo.jpg" alt="QED Code logo" class="company-logo">
+                <div class="job-content">
+                    <a href="https://qedcode.io/" class="company-name">QED Code</a>
+                    <div class="job-title">Lead AI Engineer</div>
+                </div>
+            </div>
+            <details open="">
+                <summary>Leading government-grade, on-prem RAG platform with multi-agent orchestration.</summary>
+                <p>
+                    • Designed a LangGraph multi-agent layer that converts documents into
+                    domain objects for custom apps.<br>
+                    • Switched to self-hosted Llama 3-70B, cutting inference cost 60%.<br>
+                    • Wired full observability with Langfuse and Grafana.
+                </p>
+            </details>
+        </li>
+
+        <li>
+            <span class="range">Sep 2023 –
+Dec 2024</span>
+            <div class="job-header">
+                <img src="./Dragutin Oreški_files/upwork_logo.png" alt="Upwork logo" class="company-logo">
+                <div class="job-content">
+                    <a href="https://www.upwork.com/freelancers/dragutino" class="company-name">Freelancer</a>
+                    <div class="job-title">AI Engineer (Top 3% Upwork)</div>
+                </div>
+            </div>
+            <details>
+                <summary>Built AI chatbots and migrated BI pipelines for distributed teams.</summary>
+                <p>
+                    • Migrated BI pipelines to dbt + Snowflake for a 9-TB dataset.<br>
+                    • Built AI chatbots: "Chat with Nikola" and an AI Therapist (CBT).<br>
+                    • Led a distributed team of 5 engineers.
+                </p>
+            </details>
+        </li>
+
+        <li>
+            <span class="range">Aug 2017 –
+Sep 2023</span>
+            <div class="job-header">
+                <img src="./Dragutin Oreški_files/cial_logo.png" alt="CIAL logo" class="company-logo">
+                <div class="job-content">
+                    <a href="https://cialdnb.com/" class="company-name">CIAL Dun &amp; Bradstreet</a>
+                    <div class="job-title">Data Engineer / Scientist</div>
+                </div>
+            </div>
+            <details>
+                <summary>Designed distributed ELT pipelines and NLP solutions for Latin-American markets.</summary>
+                <p>
+                    Tackled company-matching with NLP across Latin-American markets.
+                    Mentored new hires and set up the team's Prefect + Kafka stack.
+                </p>
+            </details>
+        </li>
+    </ul>
+
+
+
+        .bullet-tight {
+            margin-top: 0.1em;
+        }<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>
