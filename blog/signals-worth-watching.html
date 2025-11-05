@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signals worth watching in AI this week</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        header nav a {
+            font-size: 0.9em;
+        }
+
+        h1 {
+            margin: 0.2em 0 0.4em;
+            font-size: 2em;
+            font-weight: 500;
+        }
+
+        time {
+            font-size: 0.85em;
+            color: #777;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 0.6em;
+            font-size: 1.3em;
+        }
+
+        p, li {
+            color: #3a3a3a;
+        }
+
+        ul {
+            padding-left: 1.4em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><a href="index.html">&larr; Back to all posts</a></nav>
+        <time datetime="2025-10-24">Oct 24, 2025</time>
+        <h1>LangChain 1.0, DeepSeek OCR, and my Claude setup</h1>
+        <p>Last week’s team update boiled down to three big talking points plus a handful of other stories we’re tracking.</p>
+    </header>
+
+    <h2>Headline takeaways</h2>
+    <ul>
+        <li><a href="https://docs.langchain.com/oss/python/releases/langchain-v1">LangChain 1.0</a> landed and Harrison Chase broke down how LangChain, LangGraph, and DeepAgents fit together.</li>
+        <li><a href="https://medium.com/@ignacio.de.gregorio.noblejas/the-whale-strikes-again-4891df992430">DeepSeek’s new OCR approach</a> turns text into image tiles so long-context reasoning gets faster instead of slower.</li>
+        <li>My go-to coding loop is now Claude Code (Max) for orchestration, Codex for double-checks, and GPT-5 for the hairy edge cases.</li>
+    </ul>
+
+    <h2>LangChain 1.0 essentials</h2>
+    <p>The <a href="https://docs.langchain.com/oss/python/releases/langchain-v1">v1.0 release notes</a> make it clear what breaks, what’s stable, and where the major rewrites landed. Harrison Chase’s companion post—<a href="https://blog.langchain.com/agent-frameworks-runtimes-and-harnesses-oh-my/">Agent Framework vs. Runtime vs. Harness</a>—cleans up the mental model by spelling out how LangChain, LangGraph, and DeepAgents divide responsibilities. It is worth flagging for anyone touching our agentic stack.</p>
+
+    <h2>DeepSeek’s OCR rethink</h2>
+    <p><a href="https://medium.com/@ignacio.de.gregorio.noblejas/the-whale-strikes-again-4891df992430">DeepSeek’s “text-as-image” paper</a> keeps surfacing because it jams more context into the same token budget. By rasterising text into dense tiles, they can run bidirectional attention cheaply and keep accuracy high on sprawling documents. The idea feels wild, but the early benchmarks suggest a real cost/performance unlock.</p>
+
+    <h2>My Claude Code workflow</h2>
+    <p>Day-to-day, I let Claude Code (Max) quarterback the session: it drafts a plan, calls Codex through MCP when a second set of eyes is useful, and I still escalate gnarlier bugs to GPT-5. The notifications hook means Claude taps me only when the agent run needs a human decision. Net effect: fewer context switches and better reviews before I see the diff.</p>
+
+    <h2>Other links worth scanning</h2>
+    <ul>
+        <li>Harvard researchers dropped a <a href="https://arxiv.org/pdf/2510.14901">new sampling method</a> that aims for RL-grade gains without the RL training loop, riffing on Anthropic’s <a href="https://transformer-circuits.pub/2025/attribution-graphs/biology.html#dives-tracing">Multi-step Reasoning</a> work.</li>
+        <li>NVIDIA introduced the orbital <a href="https://blogs.nvidia.com/blog/starcloud">Starcloud data-center concept</a>—they claim it could cut energy use by 10x.</li>
+        <li>Two days after OpenAI announced Atlas, <a href="https://techcrunch.com/2025/10/23/two-days-after-openais-atlas-microsoft-launches-a-nearly-identical-ai-browser/">Microsoft refreshed Edge’s Copilot Mode</a>.</li>
+        <li><a href="https://www.investopedia.com/alphabet-google-anthropic-mulling-multibillion-dollar-cloud-deal-report-says-11834539">Google may let Anthropic rent TPUs</a>, which would be a big shift given how closely Google guards that hardware.</li>
+        <li>And after reportedly offering Andrew Tulloch $3.5B over six years, <a href="https://www.reuters.com/business/meta-is-cutting-around-600-roles-ai-unit-axios-reports-2025-10-22/">Meta still cut 600 roles</a> inside its Superintelligence Labs.</li>
+    </ul>
+</body>
+</html>

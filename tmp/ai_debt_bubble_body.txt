@@ -1,0 +1,626 @@
+
+ 
+ 
+ 
+ 
+ AI Debt bubble, Space GPUs, & Whales 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Ignacio de Gregorio Noblejas October 23, 2025 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ In partnership with 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ THEWHITEBOX TLDR; 
+ 
+ 
+ 
+ Welcome back! This week, we have a wide range of news, ranging from deploying GPUs into space to new research by DeepSeek that is forcing many in Silicon Valley to rethink how we should build LLMs , with other topics like the growing AI debt bubble or Meta’s massive layoffs. 
+ 
+ 
+ 
+ Enjoy! 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ The Simplest Way to Create and Launch AI Agents and Apps 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ You know that AI can help you automate your work, but you just don't know how to get started. 
+ 
+ 
+ 
+ With Lindy , you can build AI agents and apps in minutes simply by describing what you want in plain English. 
+ 
+ 
+ 
+ → "Create a booking platform for my business." → "Automate my sales outreach." → "Create a weekly summary about each employee's performance and send it as an email." 
+ 
+ 
+ 
+ From inbound lead qualification to AI-powered customer support and full-blown apps, Lindy has hundreds of agents that are ready to work for you 24/7/365. 
+ 
+ 
+ 
+ Stop doing repetitive tasks manually. Let Lindy automate workflows, save time, and grow your business 
+ 
+ 
+ 
+ Get $20 Worth of Free Credits 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ DATA CENTERS Hyperion, A New Giant Data Center 
+ 
+ 
+ 
+ Meta and Blue Owl Capital have formed a joint venture to build a massive data center complex in Louisiana called Hyperion , which is being financed through a $27 billion private debt transaction (the largest of its kind to date). 
+ 
+ 
+ 
+ The structure allows Meta to access capital for its AI infrastructure expansion without issuing new corporate bonds. Blue Owl will hold an 80 percent stake in the project, while Meta retains 20 percent after contributing land and development assets in exchange for roughly $3 billion in cash upfront . 
+ 
+ 
+ 
+ BlackRock has emerged as one of the largest investors in the deal. Its exchange-traded funds purchased over $3 billion of the project’s debt, and one of its active high-yield bond funds committed about $2.1 billion. The debt was issued at around 6.6 percent . 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ Regarding the terms of the deal, it’s a bargain for Meta . Considering companies like Coreweave are seeing interests over 12% in their loans, and with discount rates close (or much higher) than 6.6%, and the “risk-free” rate at 4% (10-Y US Treasury Bond), this is free money for Meta (obviously, Meta is a much more reliable borrower than Mr. “Growing via Debt”, aka Coreweave). 
+ 
+ 
+ 
+ To me, this is just a sign of two things: 
+ 
+ 
+ 
+ 
+ Big Tech is tapping more and more into debt and less on free cash flows to finance their AI buildouts, while still enjoying excellent deal rates . 
+ 
+ 
+ 
+ This may be an exaggeration, or a hot take, but I believe traditional asset managers like BlackRock are truly desperate for returns at this point , and with nobody wanting to touch the US dollar (or any fiat, for that matter) with a ten-foot pole (hence why every asset is appreciating with regard to fiat). 
+ 
+ 
+ 
+ 
+ As this short clip explains in good detail, private credit is becoming a growing concern among investors . And here’s a fun fact for you: there are more PE funds than McDonald’s ( 19k vs 14k ) in the US. 
+ 
+ 
+ 
+ INFRA DEALS Antropic in $100 billion talks with Google 
+ 
+ 
+ 
+ Anthropic is in negotiations with Google for a cloud-computing arrangement valued at more than $100 billion . 
+ 
+ 
+ 
+ Under the proposed deal, Google would provide Anthropic with access to its advanced tensor-processing units (TPUs) and cloud infrastructure to train and deploy its AI models. 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ If this deal materializes, it’s pretty huge. 
+ 
+ 
+ 
+ 
+ On the one hand, it’s a massive blow to Amazon , the biggest laggard to date among Big Tech about AI (and paying the price; they are flat for the year). Instead of Anthropic adopting their compute chips, Trainium and Inferentia, Anthropic is going to Google’s TPUs to sign an astronomical $100 billion deal (~the equivalent of 2 GW of deployed compute). 
+ 
+ 
+ 
+ On the other hand, it’s the confirmation that TPUs are entering the cloud computing market . That is, instead of being used by Google just for internal demands, demand to rent TPUs could see an explosion in value , offering something the other Hyperscalers cannot provide: a credible alternative to NVIDIA/AMD GPUs . 
+ 
+ 
+ 
+ 
+ With this, it’s just another bullish signal for Google, a company scoring win after win. Although I’m incredibly biased at this point when it comes to Google (please keep this in mind), if the AI bubble doesn’t pop and revenues grow to the expected future cash flows investors are pricing in, Google has a good claim to be the most valuable company on the planet in a couple of years . 
+ 
+ 
+ 
+ It has it all in the AI stack, from chip to application, the cash flow to fund it, and perhaps most importantly in measuring company valuations: a compelling storytelling that moves into the future , with great positioning in key upcoming industries like: 
+ 
+ 
+ 
+ 
+ Autonomous driving (Waymo), 
+ 
+ 
+ 
+ space (10% stake in SpaceX), 
+ 
+ 
+ 
+ drug discovery (Isomorphic Labs), 
+ 
+ 
+ 
+ robotics (Gemini Robotics), 
+ 
+ 
+ 
+ and even nuclear fusion . 
+ 
+ 
+ 
+ 
+ And to top it all off, it’s recapturing the market it started to lose in AI search , eating into ChatGPT’s search share. No company looks into the future the way Google does, and it only needs one of those moonshots to pay off to see investors mounting in… let alone two or more. 
+ 
+ 
+ 
+ FRONTIER LABS Meta Cuts 600 Jobs in AI Division FAIR 
+ 
+ 
+ 
+ Meta has announced it will cut about 600 jobs in its AI division, specifically targeting FAIR (its legacy AI research unit), AI product teams, and AI infrastructure groups. 
+ 
+ 
+ 
+ According to a memo from chief AI officer Alexandr Wang, the move is part of a reorganization to create “smaller, talent-dense teams” where “fewer conversations will be required to make a decision, and each person will be more load-bearing and have more scope and impact.” 
+ 
+ 
+ 
+ The cuts apply to longstanding research and infrastructure teams rather than the most newly minted units. Notably, Meta’s newer elite AI group, the TBD Lab, is reportedly not affected by these layoffs and continues to hire . 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ Not even top researchers are immune to AI-related layoffs. The fascinating thing here is that many of the laid-off researchers are highly respected individuals , including those behind highly cited papers, meaning these aren’t interns or low-level researchers; some are star researchers , which makes the move very, very bold. Many of these people will quickly join other top AI Labs with no issue. 
+ 
+ 
+ 
+ Perhaps paying $3.5 billion for a single researcher (Andrew Tulloch, after turning down a total comp of $1.4 billion) means some cuts are needed to appease investors. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ VIDEO GENERATION LTX Studio drops LTX-2 
+ 
+ 
+ 
+ LTXStudio has dropped LTX-2 , a new video generation model (and platform) to generate more professional videos. 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ Impressive demos, like basically every AI video release. Supports audio, which has become table stakes, and comes wrapped in a platform that should give you greater control. 
+ 
+ 
+ 
+ Enough to make it more useful than simply using the SOTA model, Veo 3.1? Probably yes if you’re a professional, surely not from a casual user like me. 
+ 
+ 
+ 
+ SPECIALIZED MODELS, A NEW FORM OF AI STARTUP Herasight’s “Designer Babies” 
+ 
+ 
+ 
+ Herasight has announced the launch of "CogPGT", a cutting-edge genetic tool designed to predict a child's IQ from embryo DNA during IVF (in vitro fertilization). 
+ 
+ 
+ 
+ Think of it like this: Imagine you're at an IVF clinic, and instead of picking embryos randomly, you get a "smart score" based on their genes to choose the one most likely to grow into a brighter , more stable adult. That's CogPGT in a nutshell: using AI to create "designer babies." 
+ 
+ 
+ 
+ This is essentially a Machine Learning model that takes in the genes of a given embryo and predicts how likely the future baby is to be “smart,” defined as having high “general cognitive ability”, or GCA, which has been proven to be largely hereditary (i.e., how smart you become is heavily dependent on genes). 
+ 
+ 
+ 
+ In layman’s terms, this model has examined DNA patterns and identified the key elements that commonly appear in the DNA of high GCA individuals , and uses that pattern recognition to apply it to other embryos. 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ Beyond the ethical connotations (choosing what embryos are worth giving birth to or not), it’s interesting to see how AI’s “tentacles” reach more and more industries, to the point of being actively correlated with many of the improvements in genetic engineering. 
+ 
+ 
+ 
+ As I always say, despite what the media might give away, AI is much more than LLMs . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ RESEARCH The Whale Strikes Back 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ DeepSeek, the most famous Chinese AI Lab, has released an intriguing paper that means much more than it seems. I’ve written an entire post on Medium covering all the details, especially the most complex parts, which I can’t explain in detail here for the sake of length. 
+ 
+ 
+ 
+ Initially, it’s just a simple OCR model that extracts text from images really well. But, really, is it only that? 
+ 
+ 
+ 
+ In reality, DeepSeek proposes a complete overhaul of how we think about AI text models by treating text as images . In layman’s terms, instead of feeding the model text, we feed it images with the text in them. 
+ 
+ 
+ 
+ But why? 
+ 
+ 
+ 
+ Simple, because this way we can compress data more . In the paper, they show how they can reduce token count (the number of chunks of data we send to the model, with more tokens implying more compute requirements) by a factor of ten without losing information (97% information retention). 
+ 
+ 
+ 
+ Put simply, the model can represent and process data using ten times less attention compute with no meaningful accuracy loss, making the model not only cheaper for processing, but also for training, as we can increase context windows considerably now (if previous models would require ten million tokens to represent a dataset, this model drops this requirement to one million tokens). Could this mean we’ll soon see context windows of 10 million or more? The jury is out. 
+ 
+ 
+ 
+ Perhaps more interestingly, this could lead to smarter models. But why? For two reasons: 
+ 
+ 
+ 
+ 
+ By always working with images instead of text, it can apply attention , the underlying operator governing models like ChatGPT, bidirectionally . Attention means words pay attention to each other to update their meanings with regard to the context of the sequence (e.g., ‘bank’ pays attention to ‘river’ to know it’s a riverbank). However, attention is usually autoregressive , meaning each word can attend to previous words only. Here, we add an extra processing layer that allows words to attend to the past and the future, increasing the model’s general understanding of the input. 
+ 
+ 
+ 
+ Better compression (a model capable of representing the meaning of data in smaller packages) should lead to smarter models, because they can better digest the input, capture key patterns, and ignore the rest. 
+ 
+ 
+ 
+ 
+ Long story short, DeepSeek might just have given the world: 
+ 
+ 
+ 
+ 
+ A better architecture for language modeling that is, ironically, based on processing images of text instead of the text itself. And by ‘better’ we mean cheaper, faster, and smarter 
+ 
+ 
+ 
+ A promising path to larger amounts of training data and larger context windows , as the input to be sent to the model can now be represented using fewer chunks of data. 
+ 
+ 
+ 
+ 
+ The whale (DeepSeek) never disappoints. 
+ 
+ 
+ 
+ HARDWARE Outer-space Data Centers? 
+ 
+ 
+ 
+ NVIDIA has released quite the blog post, presenting the StarCloud project . Put simply, Starcloud aims to build data centers in outer space . Their first satellite, Starcloud-1 , is a ~60 kg unit launching soon that will include the NVIDIA H100 GPU to enable high-performance computing in orbit. 
+ 
+ 
+ 
+ They argue that space-based data centres offer major sustainability advantages: solar power is abundant in orbit , cooling can use the vacuum of space (instead of terrestrial water/evaporation systems), and the lifetime carbon footprint may be 10× lower than Earth-based centres (even considering launch energy) according to the startup’s projections. 
+ 
+ 
+ 
+ They plan a large-scale future orbital data center with ~5 gigawatts of power capacity and vast solar/cooling arrays (lengths on the order of kilometres). Moreover, they envision that in 10 years, most new data centres will “be built in outer space” rather than on Earth . 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ Incredibly cool project, that it better work. The reason is that I believe we are soon going to see considerable struggles, especially in the West, for AI companies to access power to supply their chips. 
+ 
+ 
+ 
+ Cases like the recent Google drama, in which a data center was cancelled in Indianapolis due to citizen opposition , and the evidence that data centers are already increasing energy costs in constrained grids, pushing up prices for consumers in the area , mean that opposition to these builds is about to become fierce . 
+ 
+ 
+ 
+ Making matters worse, general misinformation, especially with the false belief that AI data centers waste a lot of water , is rampant despite being, at best, disingenuous, considering that Grok 4, the largest known AI model training run, used less water than a square mile of farmland uses in a year. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ But the truth is that AI companies have a PR problem because the truth is, data center buildouts do push energy prices up in the area , despite the fact that they aren’t really representing a shifting dynamic in the economies of the region: 
+ 
+ 
+ 
+ 
+ They don’t generate that many new jobs 
+ 
+ 
+ 
+ The real value AI provides today is, at best, modest 
+ 
+ 
+ 
+ 
+ NVIDIA knows that all this could soon imply reduced demand for its chips , so it is trying to push the frontier of what’s possible, looking ahead to space. 
+ 
+ 
+ 
+ Personally, my initial reaction was strong skepticism on the cooling side. They claim the void in space will dissipate heat, but are we really sure about that? 
+ 
+ 
+ 
+ And how long before AI doomers use this to frame NVIDIA’s project as “heating space”? What’s more, in today’s world, what’s true or not is basically irrelevant . The Nazi Chief of Propaganda, Goebbels, who knew a thing or two about spreading lies, said it best: 
+ 
+ 
+ 
+ 
+ ❝ 
+ 
+ 
+ “If you repeat a lie often enough, people will believe it, and you will even come to believe it yourself.” 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ AI is being built by rich corporations, which already have a base negative PR, meaning it’s very easy to generate false claims to discredit their efforts, which in turn means they have to be doubly awesome on the delivery , and that implies finding ways to make AI be seen as a good thing, not something that pushes your electricity bill upward while “drinking” your water. 
+ 
+ 
+ 
+ AI COLD WAR Chinese and Russian Female Spies 
+ 
+ 
+ 
+ According to The Times article, China and Russia are fighting the AI cold war in more innovative ways, reaching the point of sending ‘sex spies’ to flirt, marry, and even have kids with critical AI pundits in Silicon Valley. 
+ 
+ 
+ 
+ TheWhiteBox’s takeaway: 
+ 
+ 
+ 
+ The problem with this strategy is that, well, most SV leaders are gay . Jokes aside, it isn’t surprising if your goal is to steal secrets; it’s just another way of waging war, and what that I presume works really well. 
+ 
+ 
+ 
+ RESEARCH Better Sampling Yields Better Reasoning 
+ 
+ 
+ 
+ With LLMs, when trying to make them smarter, we usually assume we need to train them using Reinforcement Learning (exposing them to situations where they have to achieve a goal, letting them try things to see what sticks), since standard LLMs are considered “poor reasoners.” 
+ 
+ 
+ 
+ But is that the case really? 
+ 
+ 
+ 
+ New research from Harvard studies this and throws a pretty remarkable result: with a new sampling method, we can obtain as good results as when training LLMs on RL, but without requiring RL training at all! 
+ 
+ 
+ 
+ The reason why this works is fascinating. You can think of LLMs as bag of words; models that have seen “all written text there is to show them”, and by learning to predict the next word in the sequence, have allegedly learn the underlying knowledge (i.e., if they can predict that ‘Warsaw’ is the next word in ‘What’s Poland’s capital’, then they have learned the relationship between Poland and Warsaw). 
+ 
+ 
+ 
+ In fact, based on research by Anthropic , we know some understanding of what a capital is to a country has to be happening inside of them because they use the same neural circuit for every single question of the kind: 
+ 
+ 
+ 
+ 
+ 
+ Source 
+ 
+ 
+ 
+ 
+ 
+ Knowing this, we can ‘sample’ (get a response from) these models , the continuation of basically every sequence of text you can imagine. This is literally what you’re doing when interacting with them. 
+ 
+ 
+ 
+ Importantly, these models don’t have an exact mapping ‘text sequence → next word’, but they contemplate a distribution of possible next words , ranked by likelihood (most likely continuation to the sequence). 
+ 
+ 
+ 
+ This means we don’t necessarily have to sample the most likely word, but rather one of the most likely . This introduces the idea of the sampling mechanism: the method by which you sample words from the model . 
+ 
+ 
+ 
+ Usually, this sampling mechanism is quite direct: we sample one of the most likely candidates as the next word; we focus solely on the immediate likelihood and ignore the likelihoods of future words. 
+ 
+ 
+ 
+ Thus, what the Harvard researcher behind this piece asks is: what if we not only consider the current likelihood, but also the likelihoods of future tokens? 
+ 
+ 
+ 
+ Or, to put it more clearly, what if instead of sampling the most likely next word, we sample the word that leads to the most probable sequence? 
+ 
+ 
+ 
+ In essence, the research finds that the model’s training data contains many low-quality/high-probability sequences. In layman’s terms, the model’s training data is full of a lot of useless sequences, and most high-value/high-reasoning sequences have very low frequency in the training set . 
+ 
+ 
+ 
+ Makes sense, right? Real insights providing real value are scarce . Therefore, by constantly sampling to optimize short-term likelihood, we are much more likely to end up in the high-frequency/low-value generations that are all too common in the real world , making it very unlikely that the model, despite possessing that knowledge, properly elicits the low-likelihood yet smart answers. 
+ 
+ 
+ 
+ But when you do that, when you sample to maximize total sequence likelihood, you achieve a pretty extraordinary result: these models outcompete the same model trained with RL (trained to be a ‘reasoning model’). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Which goes to show how early into AI we are, that we don’t even know how to properly use the very same models we’ve spent billions on . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Closing Thoughts 
+ 
+ 
+ 
+ This week has been very eventful, especially concerning new, exciting research that helps us rethink our intuitions. 
+ 
+ 
+ 
+ 
+ From having DeepSeek basically saying that we are using the wrong architecture for LLMs, 
+ 
+ 
+ 
+ To a startup claiming they can guarantee your kid will be smarter using AI-led embryo selection, 
+ 
+ 
+ 
+ to a Harvard researcher showing us that we don’t know how to elicit knowledge from LLMs properly : 
+ 
+ 
+ 
+ 
+ 
+ ❝ 
+ 
+ 
+ The persisting idea is that we still don’t know what we don’t know. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Besides this, we continue to see the AI debt bubble growing larger and larger , and with incumbents appearing more desperate about the energy constraints , to the point that they are considering deploying GPUs into space . 
+ 
+ 
+ 
+ We can say a lot of bad things about AI, but boring is not one of them . 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Give a Rating to Today's Newsletter 
+ 
+ 
+ 🏝️ It's seen better days 
+ 
+ 🏝️🏝️ Acceptable 
+ 
+ 🏝️🏝️🏝️ Very interesting 
+ 
+ 🏝️🏝️🏝️🏝️ You got me hooked right until the end! 
+ 
+ 
+ Login or Subscribe to participate in polls. 
+ 
+ 
+ 
+ 
+ 
+ For business inquiries, reach me out at nacho@thewhitebox.ai 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

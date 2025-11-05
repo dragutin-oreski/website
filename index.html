@@ -203,6 +203,53 @@
         ul.bullet-tight li {
             margin-bottom: 0.2em; /* tighter gap between bullets */
         }
+
+        .blog {
+            margin-top: 60px;
+        }
+
+        .blog-intro {
+            color: #555;
+            max-width: 560px;
+            margin-bottom: 1.5em;
+        }
+
+        .post-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+
+        .post-card {
+            border-left: 2px solid #ddd;
+            padding-left: 16px;
+        }
+
+        .post-card time {
+            font-size: 0.85em;
+            color: #777;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .post-card h4 {
+            margin: 0.2em 0 0.4em;
+            font-size: 1.1em;
+        }
+
+        .post-card p {
+            margin: 0;
+            color: #444;
+        }
+
+        .blog-note {
+            margin-top: 2em;
+            font-size: 0.9em;
+        }
+
         @media (max-width: 600px) {
             .intro {
                 gap: 24px;
@@ -349,6 +396,28 @@ Sep 2023</span>
             </details>
         </li>
     </ul>
+
+    <section class="blog">
+        <h3>Posts</h3>
+        <p class="blog-intro">Quick captures of AI experiments, clever hacks, and headlines that make me pause.</p>
+        <ul class="post-list">
+            <li>
+                <article class="post-card">
+                    <time datetime="2025-10-24">Oct 24, 2025</time>
+                    <h4><a href="blog/signals-worth-watching.html">LangChain 1.0, DeepSeek OCR, and my Claude setup</a></h4>
+                    <p>Quick digest: LangChain 1.0 takeaways, DeepSeek’s text-as-image gamble, my Claude+Codex flow, and a few other headlines.</p>
+                </article>
+            </li>
+            <li>
+                <article class="post-card">
+                    <time datetime="2025-10-22">Oct 22, 2025</time>
+                    <h4><a href="blog/claude-codex-flow.html">Pairing Claude Code Max with Codex</a></h4>
+                    <p>How I combine Claude’s agentic coding flow with Codex reviews through MCP for tougher engineering tasks.</p>
+                </article>
+            </li>
+        </ul>
+        <p class="blog-note"><a href="blog/index.html">Browse all posts &rarr;</a></p>
+    </section>
 
 </body>
 </html>

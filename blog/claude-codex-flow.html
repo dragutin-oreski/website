@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pairing Claude Code Max with Codex</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        header {
+            margin-bottom: 32px;
+        }
+
+        header nav a {
+            font-size: 0.9em;
+        }
+
+        h1 {
+            margin: 0.2em 0 0.4em;
+            font-size: 2em;
+            font-weight: 500;
+        }
+
+        time {
+            font-size: 0.85em;
+            color: #777;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 0.6em;
+            font-size: 1.3em;
+        }
+
+        p, li {
+            color: #3a3a3a;
+        }
+
+        ul {
+            padding-left: 1.4em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><a href="index.html">&larr; Back to all posts</a></nav>
+        <time datetime="2025-10-22">Oct 22, 2025</time>
+        <h1>Pairing Claude Code Max with Codex</h1>
+        <p>Claude Code remains my favorite day-to-day coding partner, but tapping Codex through MCP covers the gnarlier reviews.</p>
+    </header>
+
+    <h2>Why Claude Code Max is my default</h2>
+    <p>The agentic loop Anthropics built into Claude Code Max feels like an actual teammate: it proposes a plan, double-checks each diff, and handles mundane refactors without drama. The editor integration is fast enough that I can keep flow state instead of alt-tabbing through terminals.</p>
+
+    <h2>Where GPT-5 still shines</h2>
+    <p>When the problem space crosses into obscure frameworks or heavy algorithm design, GPT-5 (via Codex) still wins on depth. It spots edge cases that Sonnet-4.5 occasionally misses and gives more surgical critiques of generated plans.</p>
+
+    <h2>The hybrid workflow</h2>
+    <ul>
+        <li>Let Claude Code Max sketch the plan and implement the straightforward pieces.</li>
+        <li>Pipe tricky diffs to Codex via MCP for review notes or alternative approaches.</li>
+        <li>Feed Codex feedback back into Claude’s plan so the agent updates its mental model.</li>
+    </ul>
+    <p>The round-trip takes a minute, but the end result is cleaner merges and less manual QA.</p>
+
+    <h2>Want a deeper dive?</h2>
+    <p>Simon Willison wrote a great piece on how he is <a href="https://simonwillison.net/2025/Oct/22/living-dangerously-with-claude" target="_blank" rel="noopener">“living dangerously with Claude”</a>. His examples mirror what I am seeing: Claude’s agentic shell paired with outside specialists is a potent combo.</p>
+</body>
+</html>
