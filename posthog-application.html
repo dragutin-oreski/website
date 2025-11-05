@@ -303,13 +303,16 @@
             }
 
             .desktop {
+                display: flex;
                 flex-direction: column;
                 padding: 80px 24px 120px;
                 align-items: center;
+                gap: 24px;
             }
 
             .icon-column {
                 position: static;
+                display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -324,6 +327,8 @@
                 bottom: 48px;
                 transform: translate(-50%, 0);
                 width: min(540px, calc(100% - 40px));
+                max-height: calc(100vh - 160px);
+                overflow-y: auto;
             }
 
             .window.active {
@@ -334,6 +339,74 @@
                 position: static;
                 margin: 32px auto 24px;
                 text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background-attachment: scroll;
+                background-size: cover;
+            }
+
+            header {
+                padding: 12px 16px 0;
+            }
+
+            header nav {
+                justify-content: center;
+            }
+
+            .desktop {
+                padding: 64px 16px 96px;
+                gap: 16px;
+            }
+
+            .icon-column {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+                gap: 16px;
+                margin-bottom: 8px;
+            }
+
+            .desktop-icon {
+                font-size: 0.78rem;
+                gap: 4px;
+            }
+
+            .icon-shape {
+                width: 56px;
+                height: 56px;
+                transform: scale(0.92);
+            }
+
+            .window {
+                top: 88px;
+                bottom: auto;
+                transform: translate(-50%, 0);
+                width: calc(100% - 28px);
+                max-width: 420px;
+                border-radius: 16px;
+                box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+            }
+
+            .window-header {
+                padding: 12px 16px;
+            }
+
+            .window-content {
+                padding: 20px 18px 28px;
+            }
+
+            .window iframe {
+                height: 60vh;
+                max-height: none;
+            }
+
+            footer {
+                width: calc(100% - 32px);
+                margin: 40px auto 32px;
+                padding: 10px 16px;
             }
         }
     </style>
@@ -561,7 +634,7 @@
             </div>
         </header>
         <div class="window-content">
-            <p><strong>Let me be honest about my weaknesses 📝</strong></p>
+            <p><strong>Let me be honest about my weaknesses</strong></p>
 
             <p>
                 In the spirit of PostHog's transparency values, I want to be upfront about something: <strong>Frontend
