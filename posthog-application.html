@@ -205,8 +205,9 @@
 
         .window {
             position: fixed;
-            inset: auto auto 64px 50%;
-            transform: translateX(-50%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, calc(-50% + 32px));
             width: min(640px, calc(100% - 120px));
             background: var(--window);
             border-radius: 18px;
@@ -220,7 +221,7 @@
         .window.active {
             opacity: 1;
             pointer-events: auto;
-            transform: translate(-50%, 0);
+            transform: translate(-50%, -50%);
         }
 
         .window-header {
@@ -318,9 +319,15 @@
 
             .window {
                 position: fixed;
+                top: auto;
                 left: 50%;
-                inset: auto auto 48px 50%;
+                bottom: 48px;
+                transform: translate(-50%, 0);
                 width: min(540px, calc(100% - 40px));
+            }
+
+            .window.active {
+                transform: translate(-50%, 0);
             }
 
             footer {
@@ -343,45 +350,45 @@
         <aside class="icon-column left">
             <button class="desktop-icon" data-window="cover-letter">
                 <span class="icon-shape icon-file"></span>
-                <span>Cover_Letter.md</span>
+                <span>Cover Letter</span>
             </button>
             <button class="desktop-icon" data-window="background">
                 <span class="icon-shape icon-folder"></span>
-                <span>My_Background/</span>
+                <span>Experience Snapshot</span>
             </button>
             <button class="desktop-icon" data-window="why-role">
                 <span class="icon-shape icon-file"></span>
-                <span>Why_This_Role.txt</span>
+                <span>Why PostHog?</span>
             </button>
             <button class="desktop-icon" data-window="deskhog">
                 <span class="icon-shape icon-file"></span>
-                <span>Pokedex_&_DeskHog.md</span>
+                <span>Playful Builds</span>
             </button>
         </aside>
 
         <aside class="icon-column right">
             <button class="desktop-icon" data-window="cv">
                 <span class="icon-shape icon-cv"></span>
-                <span>CV.pdf</span>
+                <span>Resume (PDF)</span>
             </button>
             <button class="desktop-icon" data-window="transparency">
                 <span class="icon-shape icon-file"></span>
-                <span>Transparency_Note.txt</span>
+                <span>Transparency Pledge</span>
             </button>
             <button class="desktop-icon" data-window="culture">
                 <span class="icon-shape icon-file"></span>
-                <span>Culture_Fit.md</span>
+                <span>How I Work</span>
             </button>
             <button class="desktop-icon" data-window="contact">
                 <span class="icon-shape icon-file"></span>
-                <span>Contact.chat</span>
+                <span>Say Hello</span>
             </button>
         </aside>
     </section>
 
     <article class="window" id="window-cover-letter">
         <header class="window-header">
-            <div class="window-title">Cover_Letter.md</div>
+            <div class="window-title">Cover Letter</div>
             <div class="window-controls">
                 <button class="window-minimize" data-action="minimize" aria-label="Hide cover letter window"></button>
                 <button class="window-close" data-action="close" aria-label="Close cover letter window"></button>
@@ -432,10 +439,11 @@
 
     <article class="window" id="window-background">
         <header class="window-header">
-            <div class="window-title">📁 My_Background/</div>
+            <div class="window-title">📁 Experience Snapshot</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide My Background window"></button>
-                <button class="window-close" data-action="close" aria-label="Close My Background window"></button>
+                <button class="window-minimize" data-action="minimize"
+                    aria-label="Hide Experience Snapshot window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Experience Snapshot window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -461,10 +469,10 @@
 
     <article class="window" id="window-why-role">
         <header class="window-header">
-            <div class="window-title">Why_This_Role.txt</div>
+            <div class="window-title">Why PostHog?</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide Why This Role window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Why This Role window"></button>
+                <button class="window-minimize" data-action="minimize" aria-label="Hide Why PostHog window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Why PostHog window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -489,11 +497,10 @@
 
     <article class="window" id="window-deskhog">
         <header class="window-header">
-            <div class="window-title">Pokedex_&_DeskHog.md</div>
+            <div class="window-title">Playful Builds</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize"
-                    aria-label="Hide Pokedex & DeskHog window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Pokedex & DeskHog window"></button>
+                <button class="window-minimize" data-action="minimize" aria-label="Hide Playful Builds window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Playful Builds window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -528,15 +535,15 @@
 
     <article class="window" id="window-cv">
         <header class="window-header">
-            <div class="window-title">CV.pdf</div>
+            <div class="window-title">Resume (PDF)</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide CV window"></button>
-                <button class="window-close" data-action="close" aria-label="Close CV window"></button>
+                <button class="window-minimize" data-action="minimize" aria-label="Hide Resume window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Resume window"></button>
             </div>
         </header>
         <div class="window-content">
             <iframe src="dragutin_oreski_cv.pdf" title="Dragutin Oreški CV"
-                style="width:100%;height:360px;border:1px solid rgba(0,0,0,0.12);border-radius:8px;"></iframe>
+                style="width:100%;height:680px;max-height:calc(100vh - 160px);border:1px solid rgba(0,0,0,0.12);border-radius:8px;"></iframe>
             <p style="margin-top:16px;">
                 Trouble loading? <a href="dragutin_oreski_cv.pdf" target="_blank" rel="noopener">Open the PDF in a new
                     tab.</a>
@@ -546,11 +553,11 @@
 
     <article class="window" id="window-transparency">
         <header class="window-header">
-            <div class="window-title">Transparency_Note.txt</div>
+            <div class="window-title">Transparency Pledge</div>
             <div class="window-controls">
                 <button class="window-minimize" data-action="minimize"
-                    aria-label="Hide Transparency Note window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Transparency Note window"></button>
+                    aria-label="Hide Transparency Pledge window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Transparency Pledge window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -590,16 +597,16 @@
 
     <article class="window" id="window-culture">
         <header class="window-header">
-            <div class="window-title">Culture_Fit.md</div>
+            <div class="window-title">How I Work</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide Culture Fit window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Culture Fit window"></button>
+                <button class="window-minimize" data-action="minimize" aria-label="Hide How I Work window"></button>
+                <button class="window-close" data-action="close" aria-label="Close How I Work window"></button>
             </div>
         </header>
         <div class="window-content">
             <p><strong>How I work & why PostHog feels like home:</strong></p>
 
-            <p><strong>🚀 High Autonomy</strong></p>
+            <p><strong>High Autonomy</strong></p>
             <p>
                 I do my best work when given real ownership and trust. As a freelancer, I’ve learned to define scope,
                 build solutions, manage timelines, and talk directly with customers - figuring things out as I go.
@@ -607,21 +614,21 @@
                 when I’m most engaged.
             </p>
 
-            <p><strong>📦 Ship It Mentality</strong></p>
+            <p><strong>Ship It Mentality</strong></p>
             <p>
                 I love getting things live fast and improving based on what actually happens, not just theory. I’d
                 rather see my work in users’ hands (with all its imperfect glory) than wait for “perfect.” PostHog’s
                 “Why not now?” motto speaks my language! The real example is this page.
             </p>
 
-            <p><strong>🔍 Transparency & Working in the Open</strong></p>
+            <p><strong>Transparency & Working in the Open</strong></p>
             <p>
                 Good work gets even better when you document, explain, and share it. I’m big on clear docs, tracked
                 experiments, and open communication - so anyone can jump in, give feedback, or pick up where I left off.
                 (Async > meetings!)
             </p>
 
-            <p><strong>💬 Real Customer Connection</strong></p>
+            <p><strong>Real Customer Connection</strong></p>
             <p>
                 I get my highest impact when I can talk directly to users, hear what matters, and iterate quickly. The
                 open-source mindset excites me - users literally showing me issues in the code and collaborating to
@@ -629,8 +636,8 @@
                 them.
             </p>
 
-            <p style="margin-top: 22px; font-size: 0.98em; color: #7c6bff;">
-                In short: I want to work somewhere the culture feels real, with people who care, ship, and help each
+            <p style="margin-top: 20px; padding: 12px; background: rgba(255, 95, 149, 0.1); border-radius: 8px;">
+                <strong>TL;DR?</strong> I want to work where the culture feels real, people care, ship, and help each
                 other level up. That’s why PostHog feels like a place where I’ll fit - and have fun.
             </p>
         </div>
@@ -638,10 +645,10 @@
 
     <article class="window" id="window-contact">
         <header class="window-header">
-            <div class="window-title">Contact.chat</div>
+            <div class="window-title">Say Hello</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide contact window"></button>
-                <button class="window-close" data-action="close" aria-label="Close contact window"></button>
+                <button class="window-minimize" data-action="minimize" aria-label="Hide Say Hello window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Say Hello window"></button>
             </div>
         </header>
         <div class="window-content">
