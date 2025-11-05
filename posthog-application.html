@@ -24,7 +24,14 @@
             margin: 0;
             min-height: 100vh;
             font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #d7c6a4 url("wannabehog.png") center/cover no-repeat fixed;
+            background-color: #d7c6a4;
+            background-image: url("wannabehog.png");
+            background-image: -webkit-image-set(url("wannabehog.webp") 1x, url("wannabehog.png") 1x);
+            background-image: image-set(url("wannabehog.webp") type("image/webp") 1x, url("wannabehog.png") type("image/png") 1x);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: var(--ink);
             display: flex;
             flex-direction: column;
@@ -615,9 +622,12 @@
             </div>
         </header>
         <div class="window-content">
-            <iframe src="dragutin_oreski_cv.pdf" title="Dragutin Oreški CV"
+            <iframe data-src="dragutin_oreski_cv.pdf" title="Dragutin Oreški CV"
                 style="width:100%;height:680px;max-height:calc(100vh - 160px);border:1px solid rgba(0,0,0,0.12);border-radius:8px;"></iframe>
-            <p style="margin-top:16px;">
+            <p data-iframe-status style="margin-top:16px;">
+                Resume loads on demand and appears shortly after opening this window.
+            </p>
+            <p style="margin-top:8px;">
                 Trouble loading? <a href="dragutin_oreski_cv.pdf" target="_blank" rel="noopener">Open the PDF in a new
                     tab.</a>
             </p>
@@ -750,22 +760,84 @@
     </footer>
 
     <script>
+        function activateWindow(targetWindow, allWindows) {
+            allWindows.forEach((win) => {
+                win.classList.remove("active");
+            });
+            targetWindow.classList.add("active");
+            targetWindow.style.zIndex = zIndexCounter++;
+            ensureResumeIframe(targetWindow);
+        }
+
+        function ensureResumeIframe(targetWindow) {
+            if (targetWindow.id !== "window-cv") {
+                return;
+            }
+
+            const iframe = targetWindow.querySelector("iframe[data-src]");
+            if (!iframe) {
+                return;
+            }
+
+            const loadingNotice = targetWindow.querySelector("[data-iframe-status]");
+            if (iframe.dataset.loaded === "true") {
+                if (loadingNotice) {
+                    loadingNotice.textContent = "Resume loaded. If it does not appear, open it in a new tab below.";
+                }
+                return;
+            }
+
+            if (iframe.dataset.loading === "true") {
+                if (loadingNotice) {
+                    loadingNotice.textContent = "Loading resume…";
+                }
+                return;
+            }
+
+            if (loadingNotice) {
+                loadingNotice.textContent = "Loading resume…";
+            }
+
+            iframe.dataset.loading = "true";
+
+            iframe.addEventListener("load", () => {
+                delete iframe.dataset.loading;
+                iframe.dataset.loaded = "true";
+                if (loadingNotice) {
+                    loadingNotice.textContent = "Resume loaded. If it does not appear, open it in a new tab below.";
+                }
+            }, { once: true });
+
+            const iframeSource = iframe.dataset.src;
+            if (iframeSource) {
+                requestAnimationFrame(() => {
+                    iframe.src = iframeSource;
+                });
+            }
+        }
+
+        let zIndexCounter = 20;
         const iconButtons = document.querySelectorAll(".desktop-icon[data-window]");
         const windows = document.querySelectorAll(".window");
-        let zIndexCounter = 20;
 
         iconButtons.forEach((button) => {
             const targetId = button.dataset.window;
+            if (!targetId) {
+                return;
+            }
+
             const targetWindow = document.getElementById(`window-${targetId}`);
-            if (!targetWindow) return;
+            if (!targetWindow) {
+                return;
+            }
 
             button.addEventListener("click", () => {
-                const alreadyOpen = targetWindow.classList.contains("active");
-                windows.forEach((win) => win.classList.remove("active"));
-                if (!alreadyOpen) {
-                    targetWindow.classList.add("active");
-                    targetWindow.style.zIndex = zIndexCounter++;
+                if (targetWindow.classList.contains("active")) {
+                    targetWindow.classList.remove("active");
+                    return;
                 }
+
+                activateWindow(targetWindow, windows);
             });
         });
 
