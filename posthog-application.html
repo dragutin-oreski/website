@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragutin → PostHog Application Desktop</title>
+    <style>
+        :root {
+            --ink: #211d1a;
+            --paper: #e3d6b9;
+            --pink: #ff5f95;
+            --purple: #7c6bff;
+            --navy: #142033;
+            --window: rgba(255, 255, 255, 0.92);
+            --window-border: #efe2c7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #d7c6a4 url("wannabehog.png") center/cover no-repeat fixed;
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        body::before {
+            background: linear-gradient(210deg, rgba(60, 49, 38, 0.35), rgba(146, 126, 106, 0.25));
+            mix-blend-mode: multiply;
+        }
+
+        body::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence baseFrequency='0.8' numOctaves='4' stitchTiles='stitch' type='fractalNoise'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+            opacity: 0.35;
+        }
+
+        header {
+            position: relative;
+            z-index: 3;
+            padding: 14px 20px 0;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: rgba(247, 243, 235, 0.9);
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 500;
+        }
+
+        .desktop {
+            position: relative;
+            flex: 1;
+            padding: 60px 32px 32px;
+        }
+
+        .icon-column {
+            position: fixed;
+            top: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            z-index: 2;
+        }
+
+        .icon-column.left {
+            left: 36px;
+        }
+
+        .icon-column.right {
+            right: 36px;
+        }
+
+        .desktop-icon {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: inherit;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .desktop-icon:focus-visible {
+            outline: 2px solid var(--purple);
+            outline-offset: 4px;
+        }
+
+        .icon-shape {
+            width: 64px;
+            height: 64px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 4px 0 rgba(41, 31, 23, 0.2));
+        }
+
+        .desktop-icon:hover .icon-shape,
+        .desktop-icon:focus .icon-shape {
+            filter: drop-shadow(0 6px 0 rgba(41, 31, 23, 0.24));
+        }
+
+        .icon-file::before {
+            content: "";
+            position: absolute;
+            width: 46px;
+            height: 56px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #fff8e9 0%, #ffe3bd 70%, #ffda9d 100%);
+            border: 2px solid #2f1f14;
+            clip-path: polygon(0% 0%, 82% 0%, 100% 18%, 100% 100%, 0% 100%);
+        }
+
+        .icon-file::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: rgba(47, 31, 20, 0.65);
+            top: 22px;
+            left: 16px;
+            box-shadow:
+                0 7px 0 rgba(47, 31, 20, 0.55),
+                0 14px 0 rgba(47, 31, 20, 0.45);
+        }
+
+        .icon-folder::before {
+            content: "";
+            position: absolute;
+            width: 52px;
+            height: 36px;
+            border-radius: 12px 12px 14px 14px;
+            background: linear-gradient(180deg, #ffd37a 0%, #f59f47 100%);
+            border: 2px solid #2f1f14;
+            bottom: 6px;
+        }
+
+        .icon-folder::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 16px;
+            border-radius: 10px 10px 2px 2px;
+            top: 8px;
+            left: 10px;
+            background: linear-gradient(180deg, #ffe9ba 0%, #ffc76c 100%);
+            border: 2px solid #2f1f14;
+            border-bottom-width: 0;
+        }
+
+        .icon-cv::before {
+            content: "";
+            position: absolute;
+            width: 46px;
+            height: 56px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #d8efff 0%, #a5d4ff 70%, #7dbbff 100%);
+            border: 2px solid #1b3958;
+            clip-path: polygon(0% 0%, 82% 0%, 100% 18%, 100% 100%, 0% 100%);
+        }
+
+        .icon-cv::after {
+            content: "CV";
+            position: absolute;
+            top: 19px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #12304c;
+            text-shadow: 0 2px rgba(255, 255, 255, 0.4);
+        }
+
+        .desktop-icon span {
+            max-width: 92px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: rgba(45, 37, 30, 0.9);
+            text-shadow: 0 2px rgba(255, 249, 239, 0.7);
+        }
+
+        .window {
+            position: fixed;
+            inset: auto auto 64px 50%;
+            transform: translateX(-50%);
+            width: min(640px, calc(100% - 120px));
+            background: var(--window);
+            border-radius: 18px;
+            border: 2px solid var(--window-border);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.22);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .window.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translate(-50%, 0);
+        }
+
+        .window-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4));
+            border-radius: 16px 16px 0 0;
+        }
+
+        .window-title {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .window-controls button {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            padding: 0;
+        }
+
+        .window-close {
+            background: #ff6b6b;
+        }
+
+        .window-minimize {
+            background: #ffd166;
+        }
+
+        .window-content {
+            padding: 22px 26px 32px;
+            line-height: 1.65;
+            color: rgba(33, 29, 26, 0.84);
+        }
+
+        .window-content p {
+            margin: 0 0 16px;
+        }
+
+        .window-content ul {
+            margin: 12px 0 0 18px;
+        }
+
+        .window-content li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            position: fixed;
+            left: 32px;
+            bottom: 24px;
+            z-index: 3;
+            font-size: 0.85rem;
+            color: rgba(33, 29, 26, 0.65);
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 8px 14px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(4px);
+        }
+
+        @media (max-width: 960px) {
+            body {
+                overflow-y: auto;
+            }
+
+            .desktop {
+                flex-direction: column;
+                padding: 80px 24px 120px;
+                align-items: center;
+            }
+
+            .icon-column {
+                position: static;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+                margin-bottom: 24px;
+            }
+
+            .window {
+                position: fixed;
+                left: 50%;
+                inset: auto auto 48px 50%;
+                width: min(540px, calc(100% - 40px));
+            }
+
+            footer {
+                position: static;
+                margin: 32px auto 24px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">← personal website</a>
+        </nav>
+    </header>
+
+    <section class="desktop">
+        <aside class="icon-column left">
+            <button class="desktop-icon" data-window="cover-letter">
+                <span class="icon-shape icon-file"></span>
+                <span>Cover letter.md</span>
+            </button>
+            <button class="desktop-icon" data-window="why-posthog">
+                <span class="icon-shape icon-folder"></span>
+                <span>Why PostHog</span>
+            </button>
+            <button class="desktop-icon" data-window="values">
+                <span class="icon-shape icon-file"></span>
+                <span>Culture notes</span>
+            </button>
+        </aside>
+
+        <aside class="icon-column right">
+            <button class="desktop-icon" data-window="cv">
+                <span class="icon-shape icon-cv"></span>
+                <span>CV.pdf</span>
+            </button>
+            <button class="desktop-icon" data-window="contact">
+                <span class="icon-shape icon-file"></span>
+                <span>Talk to Dragutin</span>
+            </button>
+        </aside>
+    </section>
+
+    <article class="window" id="window-cover-letter">
+        <header class="window-header">
+            <div class="window-title">Cover letter.md</div>
+            <div class="window-controls">
+                <button class="window-minimize" data-action="minimize" aria-label="Hide cover letter window"></button>
+                <button class="window-close" data-action="close" aria-label="Close cover letter window"></button>
+            </div>
+        </header>
+        <div class="window-content">
+            <p>
+                Hey PostHog! I’m Dragutin — the AI engineer who loves pairing
+                measurable outcomes with small bursts of weird joy. I’m drawn to
+                this role because it lets me ship useful automation, shape product
+                strategy, and keep everything instrumented so we can spot wins fast.
+            </p>
+            <p>
+                I’m currently prototyping multi-agent RAG systems, experimenting
+                with speculative decoding to make open weights feel snappy,
+                and coaching teams on how to track AI feature health with real data.
+                That obsession feeds perfectly into PostHog’s transparent, product-led ethos.
+            </p>
+            <p>
+                Consider this a sketchpad — happy to dive deeper into any thread,
+                from LangGraph architecture to the analytics I’d wire up on day one.
+            </p>
+        </div>
+    </article>
+
+    <article class="window" id="window-why-posthog">
+        <header class="window-header">
+            <div class="window-title">Why PostHog folder</div>
+            <div class="window-controls">
+                <button class="window-minimize" data-action="minimize" aria-label="Hide Why PostHog window"></button>
+                <button class="window-close" data-action="close" aria-label="Close Why PostHog window"></button>
+            </div>
+        </header>
+        <div class="window-content">
+            <p>Three things that make this team such a neat fit:</p>
+            <ul>
+                <li><strong>Transparent building.</strong> I love how your handbook, metrics, and roadmap are open.
+                    It invites fast feedback loops — ideal for shipping AI features that need constant evaluation.</li>
+                <li><strong>Product OS vision.</strong> An AI product engineer can help stitch insights across
+                    analytics, feature flags, and messaging. I’m excited by the chance to build copilots within that OS.</li>
+                <li><strong>Playful details.</strong> From hedgehog art to delightful microcopy, the PostHog vibe is quirky.
+                    I share that curiosity and see it as a lever to make complex workflows feel inviting.</li>
+            </ul>
+        </div>
+    </article>
+
+    <article class="window" id="window-values">
+        <header class="window-header">
+            <div class="window-title">Culture notes.txt</div>
+            <div class="window-controls">
+                <button class="window-minimize" data-action="minimize" aria-label="Hide culture notes window"></button>
+                <button class="window-close" data-action="close" aria-label="Close culture notes window"></button>
+            </div>
+        </header>
+        <div class="window-content">
+            <p><strong>Autonomy.</strong> I ship end-to-end: define the experiment, build it, instrument it, share the learnings.
+                That’s how I help teams move without waiting on handoffs.</p>
+            <p><strong>Transparency.</strong> Every agent or workflow I design gets dashboards, eval metrics,
+                and an ops guide. Clarity builds trust in AI features.</p>
+            <p><strong>Weirdness.</strong> Expect Easter eggs, hedgehogs in the commit history,
+                and human touches that make complex systems approachable.</p>
+        </div>
+    </article>
+
+    <article class="window" id="window-cv">
+        <header class="window-header">
+            <div class="window-title">CV.pdf</div>
+            <div class="window-controls">
+                <button class="window-minimize" data-action="minimize" aria-label="Hide CV window"></button>
+                <button class="window-close" data-action="close" aria-label="Close CV window"></button>
+            </div>
+        </header>
+        <div class="window-content">
+            <iframe src="dragutin_oreski_cv.pdf" title="Dragutin Oreški CV" style="width:100%;height:360px;border:1px solid rgba(0,0,0,0.12);border-radius:8px;"></iframe>
+            <p style="margin-top:16px;">
+                Trouble loading? <a href="dragutin_oreski_cv.pdf" target="_blank" rel="noopener">Open the PDF in a new tab.</a>
+            </p>
+        </div>
+    </article>
+
+    <article class="window" id="window-contact">
+        <header class="window-header">
+            <div class="window-title">Talk to Dragutin.chat</div>
+            <div class="window-controls">
+                <button class="window-minimize" data-action="minimize" aria-label="Hide contact window"></button>
+                <button class="window-close" data-action="close" aria-label="Close contact window"></button>
+            </div>
+        </header>
+        <div class="window-content">
+            <p>
+                Ping me anytime at <a href="mailto:dragutin.oreski@gmail.com">dragutin.oreski@gmail.com</a> or on
+                <a href="https://www.linkedin.com/in/dragutinoreski" target="_blank" rel="noopener">LinkedIn</a>.
+                Happy to jam on experiments, architecture, or how we keep AI features measurable from day one.
+            </p>
+            <p>Bonus: ask about the hidden hedgehog script — there’s always time for a tiny Easter egg.</p>
+        </div>
+    </article>
+
+    <footer>
+        This desktop is my playful dossier for the PostHog team.
+    </footer>
+
+    <script>
+        const iconButtons = document.querySelectorAll(".desktop-icon[data-window]");
+        const windows = document.querySelectorAll(".window");
+        let zIndexCounter = 20;
+
+        iconButtons.forEach((button) => {
+            const targetId = button.dataset.window;
+            const targetWindow = document.getElementById(`window-${targetId}`);
+            if (!targetWindow) return;
+
+            button.addEventListener("click", () => {
+                const alreadyOpen = targetWindow.classList.contains("active");
+                windows.forEach((win) => win.classList.remove("active"));
+                if (!alreadyOpen) {
+                    targetWindow.classList.add("active");
+                    targetWindow.style.zIndex = zIndexCounter++;
+                }
+            });
+        });
+
+        windows.forEach((win) => {
+            const closeBtn = win.querySelector(".window-close");
+            const minimizeBtn = win.querySelector(".window-minimize");
+
+            closeBtn?.addEventListener("click", () => {
+                win.classList.remove("active");
+            });
+
+            minimizeBtn?.addEventListener("click", () => {
+                win.classList.remove("active");
+            });
+
+            win.addEventListener("click", () => {
+                win.style.zIndex = zIndexCounter++;
+            });
+        });
+    </script>
+</body>
+</html>
