@@ -1,0 +1,16 @@
+<section>
+  <h2 style="margin-top:0">LLM Observability approach</h2>
+  <p><strong>Philosophy:</strong> Observability is product. Traces, costs, latency, and success signals are first-class.</p>
+  <h3>Day-one instrumentation for agentic systems</h3>
+  <ul>
+    <li>Emit step-level events: prompts, retrieved docs, tool calls, function outcomes, latencies, costs, token counts, cache hits.</li>
+    <li>Label success heuristics: exact/semantic match, human feedback, fallbacks triggered.</li>
+    <li>Dashboards: error/timeout rates, tail latency, cost-per-outcome, tool reliability, model drift.</li>
+    <li>Evals: nightly offline on curated datasets + online canary via feature flags; compare models/settings.</li>
+    <li>Debuggability: replayable traces with redaction; link to sessions/users to assess impact.</li>
+  </ul>
+  <p>
+    Tools used before: AgentOps (small OSS contribution), custom eval harnesses, tracing stacks. Excited to build this into
+    PostHog’s Product OS.
+  </p>
+</section>
