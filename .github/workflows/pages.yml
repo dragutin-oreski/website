@@ -21,14 +21,33 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout website
         uses: actions/checkout@v4
+        with:
+          path: site
+      - name: Checkout UI Suputnik
+        uses: actions/checkout@v4
+        with:
+          repository: dragutin-oreski/ui-suputnik
+          token: ${{ secrets.UI_SUPUTNIK_REPO_TOKEN || github.token }}
+          path: ui-suputnik
+      - name: Add UI Suputnik to site
+        run: |
+          rm -rf site/courses/ui-suputnik
+          mkdir -p site/courses/ui-suputnik
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.DS_Store' \
+            --exclude='.gitignore' \
+            --exclude='README.md' \
+            ui-suputnik/ site/courses/ui-suputnik/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
