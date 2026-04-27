@@ -15,6 +15,20 @@ It is intended for local agent clients that support MCP, such as Claude Desktop,
 
 It exposes resources and one prompt. It does not expose tools and cannot mutate files or call external APIs.
 
+## Verify Locally
+
+Run the stdio smoke test:
+
+```bash
+python3 mcp/smoke_test.py
+```
+
+Expected output:
+
+```text
+MCP smoke test passed
+```
+
 ## Local Usage
 
 Configure your MCP client to run:

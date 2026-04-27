@@ -172,6 +172,8 @@ def handle(message: dict[str, Any]) -> dict[str, Any] | None:
         return respond(message_id, {})
     if method == "resources/list":
         return respond(message_id, list_resources())
+    if method == "resources/templates/list":
+        return respond(message_id, {"resourceTemplates": []})
     if method == "resources/read":
         try:
             return respond(message_id, read_resource(params["uri"]))
