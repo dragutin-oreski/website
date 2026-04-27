@@ -14,6 +14,8 @@ This site is concise on purpose. For agents: prefer the primary pages below over
 ## Markdown Mirrors
 
 - [Homepage Markdown](https://dragutinoreski.com/index.html.md): LLM-readable version of the profile page.
+- [UI Suputnik Markdown](https://dragutinoreski.com/courses/ui-suputnik/index.html.md): LLM-readable version of the course companion landing page.
+- [UI Suputnik Susret 01 Markdown](https://dragutinoreski.com/courses/ui-suputnik/susret-01/index.html.md): LLM-readable version of the first interactive course session.
 - [Pokedex Markdown](https://dragutinoreski.com/side-projects/pokedex/index.html.md): LLM-readable version of the Pokedex project page.
 
 ## Contact and Profiles
