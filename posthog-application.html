@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragutin → PostHog Application Desktop</title>
+    <link rel="alternate" type="text/markdown" href="https://dragutinoreski.com/posthog-application.html.md" title="Markdown version">
     <style>
         :root {
             --ink: #211d1a;
@@ -290,6 +291,33 @@
             margin-bottom: 10px;
         }
 
+        .resume-frame {
+            width: 100%;
+            height: 680px;
+            max-height: calc(100vh - 160px);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+        }
+
+        .resume-status {
+            margin-top: 16px;
+        }
+
+        .resume-help {
+            margin-top: 8px;
+        }
+
+        .callout {
+            margin-top: 20px;
+            padding: 12px;
+            background: rgba(255, 95, 149, 0.1);
+            border-radius: 8px;
+        }
+
+        .connect-note {
+            margin-top: 20px;
+        }
+
         footer {
             position: fixed;
             left: 32px;
@@ -427,39 +455,39 @@
     </header>
 
     <section class="desktop">
-        <aside class="icon-column left">
-            <button class="desktop-icon" data-window="cover-letter">
+        <aside class="icon-column left" aria-label="Application sections">
+            <button type="button" class="desktop-icon" data-window="cover-letter">
                 <span class="icon-shape icon-file"></span>
                 <span>Cover Letter</span>
             </button>
-            <button class="desktop-icon" data-window="background">
+            <button type="button" class="desktop-icon" data-window="background">
                 <span class="icon-shape icon-folder"></span>
                 <span>Experience Snapshot</span>
             </button>
-            <button class="desktop-icon" data-window="why-role">
+            <button type="button" class="desktop-icon" data-window="why-role">
                 <span class="icon-shape icon-file"></span>
                 <span>Why PostHog?</span>
             </button>
-            <button class="desktop-icon" data-window="deskhog">
+            <button type="button" class="desktop-icon" data-window="deskhog">
                 <span class="icon-shape icon-file"></span>
                 <span>Playful Builds</span>
             </button>
         </aside>
 
-        <aside class="icon-column right">
-            <button class="desktop-icon" data-window="cv">
+        <aside class="icon-column right" aria-label="More application sections">
+            <button type="button" class="desktop-icon" data-window="cv">
                 <span class="icon-shape icon-cv"></span>
                 <span>Resume (PDF)</span>
             </button>
-            <button class="desktop-icon" data-window="transparency">
+            <button type="button" class="desktop-icon" data-window="transparency">
                 <span class="icon-shape icon-file"></span>
                 <span>Transparency Pledge</span>
             </button>
-            <button class="desktop-icon" data-window="culture">
+            <button type="button" class="desktop-icon" data-window="culture">
                 <span class="icon-shape icon-file"></span>
                 <span>How I Work</span>
             </button>
-            <button class="desktop-icon" data-window="contact">
+            <button type="button" class="desktop-icon" data-window="contact">
                 <span class="icon-shape icon-file"></span>
                 <span>Say Hello</span>
             </button>
@@ -470,8 +498,8 @@
         <header class="window-header">
             <div class="window-title">Cover Letter</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide cover letter window"></button>
-                <button class="window-close" data-action="close" aria-label="Close cover letter window"></button>
+                <button type="button" class="window-minimize" data-action="minimize" aria-label="Hide cover letter window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close cover letter window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -493,12 +521,12 @@
             </p>
             <p>
                 I get my best results when I have:
+            </p>
             <ul>
                 <li>Autonomy to build and own the product experience from definition to deployment</li>
                 <li>Direct feedback loops with users, so learning and iteration never stop</li>
                 <li>Responsibility for real-world outcomes, not just code in a notebook</li>
             </ul>
-            </p>
             <p>
                 I work well with customers (100% client satisfaction on
                 <a href="https://www.upwork.com/freelancers/~014eaffb995e4a164f?mp_source=share" target="_blank"
@@ -521,9 +549,9 @@
         <header class="window-header">
             <div class="window-title">📁 Experience Snapshot</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize"
+                <button type="button" class="window-minimize" data-action="minimize"
                     aria-label="Hide Experience Snapshot window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Experience Snapshot window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close Experience Snapshot window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -535,7 +563,7 @@
                 <li><strong>6 years: Data Engineer.</strong> Built large-scale data pipelines and systems - hands-on
                     experience moving, cleaning, and making sense of data at scale. This has become the foundation for
                     how I approach AI problems.</li>
-                <li><strong>Freelance & client focus.</strong> Worked directly with clients as a top 3% Upwork AI
+                <li><strong>Freelance &amp; client focus.</strong> Worked directly with clients as a top 3% Upwork AI
                     Engineer (100% satisfaction). Delivered end-to-end - including learning frontend on the fly when
                     needed. <a href="https://www.upwork.com/freelancers/~014eaffb995e4a164f?mp_source=share"
                         target="_blank" rel="noopener">See my profile →</a></li>
@@ -551,8 +579,8 @@
         <header class="window-header">
             <div class="window-title">Why PostHog?</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide Why PostHog window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Why PostHog window"></button>
+                <button type="button" class="window-minimize" data-action="minimize" aria-label="Hide Why PostHog window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close Why PostHog window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -579,8 +607,8 @@
         <header class="window-header">
             <div class="window-title">Playful Builds</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide Playful Builds window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Playful Builds window"></button>
+                <button type="button" class="window-minimize" data-action="minimize" aria-label="Hide Playful Builds window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close Playful Builds window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -617,17 +645,16 @@
         <header class="window-header">
             <div class="window-title">Resume (PDF)</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide Resume window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Resume window"></button>
+                <button type="button" class="window-minimize" data-action="minimize" aria-label="Hide Resume window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close Resume window"></button>
             </div>
         </header>
         <div class="window-content">
-            <iframe data-src="dragutin_oreski_cv.pdf" title="Dragutin Oreški CV"
-                style="width:100%;height:680px;max-height:calc(100vh - 160px);border:1px solid rgba(0,0,0,0.12);border-radius:8px;"></iframe>
-            <p data-iframe-status style="margin-top:16px;">
+            <iframe data-src="dragutin_oreski_cv.pdf" title="Dragutin Oreški CV" class="resume-frame"></iframe>
+            <p data-iframe-status class="resume-status">
                 Resume loads on demand and appears shortly after opening this window.
             </p>
-            <p style="margin-top:8px;">
+            <p class="resume-help">
                 Trouble loading? <a href="dragutin_oreski_cv.pdf" target="_blank" rel="noopener">Open the PDF in a new
                     tab.</a>
             </p>
@@ -638,9 +665,9 @@
         <header class="window-header">
             <div class="window-title">Transparency Pledge</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize"
+                <button type="button" class="window-minimize" data-action="minimize"
                     aria-label="Hide Transparency Pledge window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Transparency Pledge window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close Transparency Pledge window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -659,7 +686,7 @@
 
             <p><strong>What I bring instead:</strong></p>
             <ul>
-                <li><strong>Strong data & AI engineering:</strong> This is where I thrive - building robust systems,
+                <li><strong>Strong data &amp; AI engineering:</strong> This is where I thrive - building robust systems,
                     data pipelines, and AI infrastructure.</li>
                 <li><strong>Eagerness to learn:</strong> I'm genuinely excited to improve my frontend skills and learn
                     whatever is needed for this role. I've proven I can pick up new technologies quickly.</li>
@@ -669,7 +696,7 @@
                     some polish. I know what good looks like, and I'll work to get there.</li>
             </ul>
 
-            <p style="margin-top: 20px; padding: 12px; background: rgba(255, 95, 149, 0.1); border-radius: 8px;">
+            <p class="callout">
                 <strong>Bottom line:</strong> I believe in being transparent about capabilities. I'll never claim to be
                 something I'm not, but I'm 100% committed to learning and growing in whatever direction the role needs.
                 If this role heavily emphasizes frontend work, I want you to know what you're getting - and what I'm
@@ -682,12 +709,12 @@
         <header class="window-header">
             <div class="window-title">How I Work</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide How I Work window"></button>
-                <button class="window-close" data-action="close" aria-label="Close How I Work window"></button>
+                <button type="button" class="window-minimize" data-action="minimize" aria-label="Hide How I Work window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close How I Work window"></button>
             </div>
         </header>
         <div class="window-content">
-            <p><strong>How I work & why PostHog feels like home:</strong></p>
+            <p><strong>How I work &amp; why PostHog feels like home:</strong></p>
 
             <p><strong>High Autonomy</strong></p>
             <p>
@@ -704,11 +731,11 @@
                 “Why not now?” motto speaks my language! The real example is this page.
             </p>
 
-            <p><strong>Transparency & Working in the Open</strong></p>
+            <p><strong>Transparency &amp; Working in the Open</strong></p>
             <p>
                 Good work gets even better when you document, explain, and share it. I’m big on clear docs, tracked
                 experiments, and open communication - so anyone can jump in, give feedback, or pick up where I left off.
-                (Async > meetings!)
+                (Async &gt; meetings!)
             </p>
 
             <p><strong>Real Customer Connection</strong></p>
@@ -719,7 +746,7 @@
                 them.
             </p>
 
-            <p style="margin-top: 20px; padding: 12px; background: rgba(255, 95, 149, 0.1); border-radius: 8px;">
+            <p class="callout">
                 <strong>TL;DR?</strong> I want to work where the culture feels real, people care, ship, and help each
                 other level up. That’s why PostHog feels like a place where I’ll fit - and have fun.
             </p>
@@ -730,8 +757,8 @@
         <header class="window-header">
             <div class="window-title">Say Hello</div>
             <div class="window-controls">
-                <button class="window-minimize" data-action="minimize" aria-label="Hide Say Hello window"></button>
-                <button class="window-close" data-action="close" aria-label="Close Say Hello window"></button>
+                <button type="button" class="window-minimize" data-action="minimize" aria-label="Hide Say Hello window"></button>
+                <button type="button" class="window-close" data-action="close" aria-label="Close Say Hello window"></button>
             </div>
         </header>
         <div class="window-content">
@@ -749,7 +776,7 @@
                 <li>Why observability at the agentic level is so critical</li>
                 <li>My Pokedex project and hardware hacking adventures</li>
             </ul>
-            <p style="margin-top: 20px;">
+            <p class="connect-note">
                 <strong>Looking forward to connecting!</strong>
             </p>
         </div>

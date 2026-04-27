@@ -6,10 +6,16 @@ This site is concise on purpose. For agents: prefer the primary pages below over
 
 ## Primary URLs
 
-- Homepage / profile: https://dragutinoreski.com/
-- UI Suputnik course companion: https://dragutinoreski.com/courses/ui-suputnik/
-- Pokedex side project: https://dragutinoreski.com/side-projects/pokedex/
-- CV: https://dragutinoreski.com/dragutin_oreski_cv.pdf
+- [Homepage / profile](https://dragutinoreski.com/): Human-facing profile page.
+- [UI Suputnik course companion](https://dragutinoreski.com/courses/ui-suputnik/): Course companion published from a separate repository during deploy.
+- [Pokedex side project](https://dragutinoreski.com/side-projects/pokedex/): Hardware/computer-vision side project page.
+- [CV](https://dragutinoreski.com/dragutin_oreski_cv.pdf): PDF CV.
+
+## Markdown Mirrors
+
+- [Homepage Markdown](https://dragutinoreski.com/index.html.md): LLM-readable version of the profile page.
+- [Pokedex Markdown](https://dragutinoreski.com/side-projects/pokedex/index.html.md): LLM-readable version of the Pokedex project page.
+- [PostHog application Markdown](https://dragutinoreski.com/posthog-application.html.md): Archived playful application page; optional context, not a current employment claim.
 
 ## Contact and Profiles
 
@@ -39,6 +45,11 @@ Dragutin Oreški is an AI Engineer based in Zagreb. His public work focuses on p
 - UI Suputnik: Croatian-language visual companion materials for an introductory artificial intelligence course.
 - Pokedex: a handheld Raspberry Pi object-recognition side project with camera, display, speaker, and browseable history.
 - Strategy analyzer: trading strategy performance demo at https://strategy.dragutinoreski.com/.
+
+## MCP
+
+- [Local MCP server source](https://dragutinoreski.com/mcp/profile_server.py): Read-only MCP stdio server exposing public profile resources from this site.
+- [MCP usage notes](https://dragutinoreski.com/mcp/README.md): How to connect the local profile MCP server. A remote MCP endpoint needs server hosting and cannot run directly on GitHub Pages.
 
 ## Agent Notes
 
