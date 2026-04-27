@@ -18,6 +18,12 @@ The `UI Suputnik` course is intentionally kept outside this repository. During d
 dragutin-oreski/ui-suputnik
 ```
 
+Local checkout:
+
+```text
+/Users/dragutinoreski/Documents/Data_surfers/Algebra/ui-suputnik
+```
+
 and publishes it under:
 
 ```text
