@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeslAI · Dragutin Oreški</title>
+  <meta name="description" content="TeslAI is a multilingual Nikola Tesla visitor guide built for Turistička zajednica grada Karlovca, with QR-based local suggestions and text-only answers.">
+  <link rel="canonical" href="https://dragutinoreski.com/side-projects/teslai/">
+  <link rel="alternate" type="text/markdown" href="https://dragutinoreski.com/side-projects/teslai/index.html.md" title="Markdown version">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://dragutinoreski.com/side-projects/teslai/#webpage",
+        "url": "https://dragutinoreski.com/side-projects/teslai/",
+        "name": "TeslAI - Dragutin Oreški",
+        "description": "TeslAI is a multilingual Nikola Tesla visitor guide built for Turistička zajednica grada Karlovca, with QR-based local suggestions and text-only answers.",
+        "isPartOf": {
+          "@id": "https://dragutinoreski.com/#website"
+        },
+        "about": {
+          "@id": "https://dragutinoreski.com/side-projects/teslai/#project"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://dragutinoreski.com/side-projects/teslai/#project",
+        "url": "https://teslai.netlify.app/",
+        "name": "TeslAI",
+        "description": "A Nikola Tesla visitor guide that supports typed questions and optional microphone input, answers only in text, and adapts local suggestions based on the QR/location entry point.",
+        "applicationCategory": "EducationalApplication",
+        "image": "https://dragutinoreski.com/side-projects/teslai/res/teslai-portrait.webp",
+        "creator": {
+          "@id": "https://dragutinoreski.com/#person"
+        },
+        "sponsor": {
+          "@type": "Organization",
+          "name": "Turistička zajednica grada Karlovca",
+          "alternateName": "Karlovac Tourist Board",
+          "url": "https://visitkarlovac.hr/"
+        },
+        "keywords": [
+          "Nikola Tesla",
+          "tourism guide",
+          "tourism assistant",
+          "multilingual chatbot",
+          "QR code experience"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://dragutinoreski.com/#person",
+        "name": "Dragutin Oreški",
+        "url": "https://dragutinoreski.com/",
+        "sameAs": [
+          "https://github.com/dragutin-oreski",
+          "https://www.linkedin.com/in/dragutinoreski"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dragutinoreski.com/#website",
+        "url": "https://dragutinoreski.com/",
+        "name": "Dragutin Oreški"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --serif: "Source Serif 4", "Iowan Old Style", "Charter", Georgia, serif;
+      --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+      --ink: #1a1814;
+      --ink-2: #3a352c;
+      --muted: #6f6754;
+      --muted-soft: #a59c84;
+
+      --paper: #faf8f3;
+      --card: #fbf7ec;
+      --rule: #e6dfcf;
+      --rule-soft: #f0eadc;
+
+      --accent: oklch(0.55 0.10 65);
+      --tesla: #79ebbb;
+      --tesla-deep: #020725;
+      --bubble: #333853;
+      --user-bubble: #082b5b;
+
+      --col-wide: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: var(--col-wide);
+      margin: 0 auto;
+      padding: 32px clamp(20px, 4vw, 48px) 88px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 56px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid var(--ink);
+      border-radius: 50%;
+      background: var(--card);
+      font-family: var(--serif);
+      font-size: 19px;
+      font-style: italic;
+    }
+    .brand-name {
+      display: block;
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.1;
+    }
+    .brand-meta {
+      display: block;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-size: 10.5px;
+      margin-top: 2px;
+    }
+    .topbar-nav {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 11px;
+    }
+    .topbar-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
+    .topbar-nav a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+    .kicker {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-size: 11px;
+      margin-bottom: 18px;
+    }
+    .kicker .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      transform: translateY(-1px);
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(48px, 7vw, 78px);
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 24px;
+      max-width: 12ch;
+    }
+    h1 em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .hero-sub {
+      max-width: 46ch;
+      margin: 0 0 30px;
+      color: var(--ink-2);
+      font-family: var(--serif);
+      font-size: clamp(19px, 2vw, 23px);
+      font-style: italic;
+      line-height: 1.45;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 42px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 15px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--rule);
+    }
+    .button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px 40px;
+      padding: 24px 0;
+      margin: 0 0 46px;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero-meta dt { display: block; margin-bottom: 6px; opacity: 0.75; }
+    .hero-meta dd {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .app-figure {
+      width: 100%;
+      max-width: min(100%, calc(100vw - 40px));
+      margin: 0 0 64px;
+      min-height: clamp(520px, 72vw, 760px);
+      background: var(--tesla-deep);
+      border: 1px solid rgba(121, 235, 187, 0.38);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+      overflow: hidden;
+      position: relative;
+    }
+    .app-language {
+      position: absolute;
+      top: 26px;
+      right: 30px;
+      display: inline-grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border: 3px solid var(--tesla);
+      border-radius: 50%;
+      color: var(--tesla);
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .app-screen {
+      min-width: 0;
+      min-height: inherit;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: clamp(22px, 4vw, 42px);
+    }
+    .app-portrait {
+      justify-self: center;
+      width: min(340px, 42vw);
+      max-width: 100%;
+      margin-top: 4px;
+      border-radius: 10px;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.22));
+    }
+    .app-panel {
+      min-width: 0;
+      align-self: end;
+      display: grid;
+      gap: 18px;
+    }
+    .chat-line {
+      width: 88%;
+      max-width: 780px;
+      border-radius: 28px;
+      padding: 18px 22px;
+      color: var(--tesla);
+      background: var(--bubble);
+      font-size: clamp(16px, 2.2vw, 25px);
+      line-height: 1.38;
+      overflow-wrap: break-word;
+    }
+    .chat-line.user {
+      justify-self: end;
+      width: 70%;
+      max-width: 620px;
+      background: var(--user-bubble);
+    }
+    .input-rail {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .input-pill {
+      flex: 1;
+      min-width: 0;
+      min-height: 62px;
+      border: 3px solid var(--tesla);
+      border-radius: 999px;
+      padding: 15px 26px;
+      color: rgba(250, 248, 243, 0.56);
+      font-size: clamp(16px, 2vw, 22px);
+    }
+    .round-icon {
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 62px;
+      width: 62px;
+      height: 62px;
+      border: 3px solid var(--tesla);
+      border-radius: 50%;
+      color: var(--tesla);
+      font-size: 22px;
+      font-family: var(--sans);
+    }
+    .mic-icon {
+      font-size: 20px;
+    }
+
+    .prose {
+      max-width: 700px;
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.65;
+      color: var(--ink-2);
+    }
+    .prose p { margin: 0 0 1.1em; }
+    .section {
+      margin-top: 68px;
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--rule);
+      padding-top: 26px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 31px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--muted-soft);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .step {
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      background: var(--card);
+      padding: 18px;
+    }
+    .step-num {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 25px;
+      line-height: 1;
+      color: var(--accent);
+    }
+    .step h3 {
+      margin: 12px 0 8px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .feature-list li {
+      padding-top: 12px;
+      border-top: 1px solid var(--rule-soft);
+      color: var(--ink-2);
+    }
+    .feature-list strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .link-card {
+      position: relative;
+      display: block;
+      min-height: 128px;
+      padding: 20px;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      background: var(--card);
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 0.18s, transform 0.18s;
+    }
+    .link-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .link-card .arrow {
+      position: absolute;
+      right: 18px;
+      top: 16px;
+      color: var(--accent);
+      font-family: var(--mono);
+    }
+    .link-card .label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .link-card .name {
+      font-family: var(--serif);
+      font-size: 23px;
+      line-height: 1.15;
+    }
+    .colophon {
+      margin-top: 80px;
+      padding-top: 28px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.82rem;
+      color: var(--muted-soft);
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .colophon a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .colophon a:hover { color: var(--ink); }
+
+    @media (max-width: 760px) {
+      .topbar {
+        align-items: flex-start;
+        margin-bottom: 36px;
+      }
+      h1 { font-size: 46px; }
+      .hero-meta { gap: 18px 28px; }
+      .app-figure {
+        min-height: auto;
+      }
+      .app-language {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+      }
+      .app-portrait { width: min(270px, 72vw); }
+      .app-panel {
+        gap: 12px;
+      }
+      .chat-line {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 18px;
+      }
+      .chat-line.user { width: 88%; }
+      .input-rail {
+        gap: 10px;
+      }
+      .round-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+      }
+      .steps,
+      .feature-list,
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+      .prose { font-size: 18px; }
+    }
+  </style>
+  <script defer src="/analytics.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="https://dragutinoreski.com/">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>
+          <span class="brand-name">Dragutin Oreški</span>
+          <span class="brand-meta">TeslAI · Tourism project</span>
+        </span>
+      </a>
+      <nav class="topbar-nav">
+        <a href="https://dragutinoreski.com/">← Home</a>
+      </nav>
+    </header>
+
+    <section>
+      <div class="kicker"><span class="dot"></span>Visitor guide · Nikola Tesla</div>
+      <h1>Talk with <em>Tesla</em>.</h1>
+      <p class="hero-sub">
+        TeslAI is a multilingual visitor guide built for Turistička zajednica grada Karlovca to help people discover the area through Nikola Tesla, local recommendations, and QR-based entry points.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="https://teslai.netlify.app/">Open live app</a>
+        <a class="button secondary" href="https://teslai.netlify.app/?location=gospic">Try Gospić greeting</a>
+      </div>
+      <dl class="hero-meta">
+        <div><dt>Client</dt><dd>Turistička zajednica grada Karlovca</dd></div>
+        <div><dt>Output</dt><dd>Text only, no cloned Tesla voice</dd></div>
+        <div><dt>Languages</dt><dd>EN, HR, DE, FR, PL and more</dd></div>
+        <div><dt>QR mode</dt><dd>Suggestions adapt to the scanned location</dd></div>
+      </dl>
+
+      <figure class="app-figure" aria-label="TeslAI application preview">
+        <span class="app-language" aria-hidden="true">EN</span>
+        <div class="app-screen">
+          <img class="app-portrait" src="res/teslai-avatar.webp" alt="Animated line-art portrait of Nikola Tesla used in TeslAI">
+          <figcaption class="app-panel">
+            <div class="chat-line">Every corner of the world, no matter how small, holds great potential. Ask me how I turned my dreams into reality, or anything else you wish to know.</div>
+            <div class="chat-line user">Where should I eat after visiting Smiljan?</div>
+            <div class="chat-line">I would recommend Restaurant MOST at Budačka b. b. in Gospić, just a few kilometers from Smiljan. You can reach them at +385 (0)53 575 512.</div>
+          </figcaption>
+          <div class="input-rail" aria-hidden="true">
+            <div class="input-pill">Type your message...</div>
+            <span class="round-icon mic-icon">🎤</span>
+            <span class="round-icon">▶</span>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+    <section class="prose">
+      <p>
+        TeslAI was built as a visitor-facing experience for Turistička zajednica grada Karlovca. The idea was to make local discovery feel more like a conversation than a brochure: visitors scan a QR code, open the app in the right context, and ask Tesla about the place around them.
+      </p>
+      <p>
+        The first concept was voice-to-voice, but we deliberately removed Tesla voice output. Visitors can still use the microphone as input, but the app always answers in text because cloning Tesla's voice was not the right choice for the project.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Visitor flow</h2>
+        <span class="section-label">experience</span>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <div class="step-num">01</div>
+          <h3>Scan a location QR code</h3>
+          <p>Different QR codes open the same app with different starting context and locally relevant suggestions.</p>
+        </li>
+        <li class="step">
+          <div class="step-num">02</div>
+          <h3>Ask Tesla</h3>
+          <p>The visitor can ask about Tesla, nearby places, restaurants, activities, accommodation, or practical travel details.</p>
+        </li>
+        <li class="step">
+          <div class="step-num">03</div>
+          <h3>Read the answer</h3>
+          <p>The response appears as text, with suggested follow-ups that keep the conversation tied to the scanned location.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>What mattered</h2>
+        <span class="section-label">product notes</span>
+      </div>
+      <ul class="feature-list">
+        <li><strong>Place-specific discovery</strong> The QR entry point changes the opening message and suggested questions for the visitor's current area.</li>
+        <li><strong>Respectful character design</strong> Tesla is present visually and conversationally, but the app does not clone or synthesize his voice.</li>
+        <li><strong>Useful local context</strong> The assistant can recommend restaurants, accommodation, activities, and points of interest from the tourism-board material.</li>
+        <li><strong>Simple public use</strong> The app is designed for people arriving from a QR code, not for users who want to configure a chatbot.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Links</h2>
+        <span class="section-label">go deeper</span>
+      </div>
+      <div class="links-grid">
+        <a class="link-card" href="https://teslai.netlify.app/">
+          <span class="arrow">↗</span>
+          <div class="label">Live app</div>
+          <div class="name">teslai.netlify.app</div>
+        </a>
+        <a class="link-card" href="https://teslai.netlify.app/?location=plitvice">
+          <span class="arrow">↗</span>
+          <div class="label">Location mode</div>
+          <div class="name">Plitvice greeting</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <span>TeslAI · 2024</span>
+      <span>Anonymous analytics · no session replay</span>
+      <span><a href="https://dragutinoreski.com/">Home</a></span>
+    </footer>
+  </div>
+</body>
+</html>

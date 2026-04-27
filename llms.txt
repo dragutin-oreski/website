@@ -9,6 +9,7 @@ This site is concise on purpose. For agents: prefer the primary pages below over
 - [Homepage / profile](https://dragutinoreski.com/): Human-facing profile page.
 - [UI Suputnik course companion](https://dragutinoreski.com/courses/ui-suputnik/): Course companion published from a separate repository during deploy.
 - [Pokedex side project](https://dragutinoreski.com/side-projects/pokedex/): Hardware/computer-vision side project page.
+- [TeslAI side project](https://dragutinoreski.com/side-projects/teslai/): Multilingual Nikola Tesla visitor guide built for Turistička zajednica grada Karlovca, with QR-based local suggestions and text-only answers.
 - [CV](https://dragutinoreski.com/dragutin_oreski_cv.pdf): PDF CV.
 
 ## Markdown Mirrors
@@ -17,6 +18,7 @@ This site is concise on purpose. For agents: prefer the primary pages below over
 - [UI Suputnik Markdown](https://dragutinoreski.com/courses/ui-suputnik/index.html.md): LLM-readable version of the course companion landing page.
 - [UI Suputnik Susret 01 Markdown](https://dragutinoreski.com/courses/ui-suputnik/susret-01/index.html.md): LLM-readable version of the first interactive course session.
 - [Pokedex Markdown](https://dragutinoreski.com/side-projects/pokedex/index.html.md): LLM-readable version of the Pokedex project page.
+- [TeslAI Markdown](https://dragutinoreski.com/side-projects/teslai/index.html.md): LLM-readable version of the TeslAI project page.
 
 ## Contact and Profiles
 
@@ -45,6 +47,7 @@ Dragutin Oreški is an AI Engineer based in Zagreb. His public work focuses on p
 
 - UI Suputnik: Croatian-language visual companion materials for an introductory artificial intelligence course.
 - Pokedex: a handheld Raspberry Pi object-recognition side project with camera, display, speaker, and browseable history.
+- TeslAI: a multilingual Nikola Tesla visitor guide built for Turistička zajednica grada Karlovca / Karlovac Tourist Board. It uses QR/location entry points for local suggestions, accepts text or microphone input, and always outputs text rather than cloned Tesla voice. Live app: https://teslai.netlify.app/.
 - Strategy analyzer: trading strategy performance demo at https://strategy.dragutinoreski.com/.
 
 ## MCP

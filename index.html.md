@@ -45,7 +45,7 @@ Agent-readable overview: https://dragutinoreski.com/llms.txt
 
 - Role: AI Engineer.
 - Dates: March 2024 to December 2024.
-- Work: Built custom RAG and multi-agent systems, AI chatbots, AI-based product matching, simulation tooling, Dialogflow conversational AI, and scalable video creation tooling.
+- Work: Built custom RAG and multi-agent systems, AI chatbots including TeslAI / Chat with Nikola, AI-based product matching, simulation tooling, Dialogflow conversational AI, and scalable video creation tooling.
 - Public profile link: https://www.upwork.com/freelancers/dragutino
 
 ### Upp Agency
@@ -75,6 +75,15 @@ Agent-readable overview: https://dragutinoreski.com/llms.txt
 - Type: Side project.
 - Description: Handheld Raspberry Pi object-recognition build with a tiny screen, speaker, camera, and browseable detection history.
 - GitHub: https://github.com/dragutin-oreski/pokedex
+
+### TeslAI
+
+- URL: https://dragutinoreski.com/side-projects/teslai/
+- Markdown mirror: https://dragutinoreski.com/side-projects/teslai/index.html.md
+- Live app: https://teslai.netlify.app/
+- Type: Tourism client project.
+- Client: Turistička zajednica grada Karlovca / Karlovac Tourist Board.
+- Description: Multilingual Nikola Tesla visitor guide with QR-based local suggestions, optional microphone input, and text-only answers.
 
 ### Strategy Analyzer
 

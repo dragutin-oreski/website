@@ -35,6 +35,13 @@ RESOURCE_FILES = {
         "description": "LLM-readable Markdown mirror of the Pokedex side project.",
         "mimeType": "text/markdown",
     },
+    "dragutin://profile/teslai": {
+        "path": ROOT / "side-projects" / "teslai" / "index.html.md",
+        "name": "teslai-markdown",
+        "title": "TeslAI Markdown",
+        "description": "LLM-readable Markdown mirror of the TeslAI side project.",
+        "mimeType": "text/markdown",
+    },
     "dragutin://profile/sitemap": {
         "path": ROOT / "sitemap.xml",
         "name": "sitemap",
@@ -62,6 +69,7 @@ Current public context:
 - Lecturer at Algebra Bernays in April 2026 for a 60-hour course on AI benefits and risks.
 - Creator of UI Suputnik, a Croatian-language course companion for introductory AI concepts.
 - Builder of the Pokedex side project, a handheld Raspberry Pi object-recognition device.
+- Builder of TeslAI, a multilingual Nikola Tesla visitor guide for Turistička zajednica grada Karlovca with QR-based local suggestions and text-only answers.
 
 Public links:
 
@@ -69,6 +77,8 @@ Public links:
 - LLMs.txt: https://dragutinoreski.com/llms.txt
 - UI Suputnik: https://dragutinoreski.com/courses/ui-suputnik/
 - Pokedex: https://dragutinoreski.com/side-projects/pokedex/
+- TeslAI: https://dragutinoreski.com/side-projects/teslai/
+- TeslAI live app: https://teslai.netlify.app/
 - GitHub: https://github.com/dragutin-oreski
 - LinkedIn: https://www.linkedin.com/in/dragutinoreski
 - Email: mailto:dragutin.oreski@gmail.com

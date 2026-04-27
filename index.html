@@ -84,6 +84,9 @@
                         "@id": "https://dragutinoreski.com/side-projects/pokedex/#project"
                     },
                     {
+                        "@id": "https://dragutinoreski.com/side-projects/teslai/#project"
+                    },
+                    {
                         "@id": "https://strategy.dragutinoreski.com/#webapp"
                     }
                 ]
@@ -150,6 +153,33 @@
             },
             {
                 "@type": "WebApplication",
+                "@id": "https://dragutinoreski.com/side-projects/teslai/#project",
+                "url": "https://teslai.netlify.app/",
+                "name": "TeslAI",
+                "description": "A multilingual Nikola Tesla visitor guide built for Turistička zajednica grada Karlovca, with QR-based local suggestions and text-only answers.",
+                "applicationCategory": "EducationalApplication",
+                "creator": {
+                    "@id": "https://dragutinoreski.com/#person"
+                },
+                "sponsor": {
+                    "@type": "Organization",
+                    "name": "Turistička zajednica grada Karlovca",
+                    "alternateName": "Karlovac Tourist Board",
+                    "url": "https://visitkarlovac.hr/"
+                },
+                "keywords": [
+                    "Nikola Tesla",
+                    "tourism guide",
+                    "tourism assistant",
+                    "multilingual chatbot",
+                    "QR code experience"
+                ],
+                "isPartOf": {
+                    "@id": "https://dragutinoreski.com/#website"
+                }
+            },
+            {
+                "@type": "WebApplication",
                 "@id": "https://strategy.dragutinoreski.com/#webapp",
                 "url": "https://strategy.dragutinoreski.com/",
                 "name": "Strategy analyzer",
@@ -185,6 +215,12 @@
                     {
                         "@type": "ListItem",
                         "position": 4,
+                        "url": "https://dragutinoreski.com/side-projects/teslai/",
+                        "name": "TeslAI"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
                         "url": "https://strategy.dragutinoreski.com/",
                         "name": "Strategy analyzer"
                     }
@@ -777,7 +813,7 @@
                         <li>Built AI chatbots:
                             <ul>
                                 <li><strong>Storyteller</strong> &mdash; AI-generated personalized children&rsquo;s stories.</li>
-                                <li><strong>Chat with Nikola</strong> &mdash; interactive Nikola Tesla chatbot.</li>
+                                <li><a href="side-projects/teslai/"><strong>TeslAI / Chat with Nikola</strong></a> &mdash; interactive Nikola Tesla chatbot.</li>
                                 <li><strong>AI Therapist</strong> &mdash; CBT-driven anxiety support.</li>
                             </ul>
                         </li>
@@ -845,8 +881,14 @@
                 <div class="proj-desc">Handheld Raspberry Pi object-recognition build with a tiny screen and voice.</div>
                 <span class="proj-tag">Toy</span>
             </a>
-            <a href="https://strategy.dragutinoreski.com" class="proj-card">
+            <a href="side-projects/teslai/" class="proj-card">
                 <div class="proj-num">03</div>
+                <div class="proj-name">TeslAI</div>
+                <div class="proj-desc">Nikola Tesla visitor guide with QR-based local suggestions and text-only answers.</div>
+                <span class="proj-tag">Tourism</span>
+            </a>
+            <a href="https://strategy.dragutinoreski.com" class="proj-card">
+                <div class="proj-num">04</div>
                 <div class="proj-name">Strategy analyzer</div>
                 <div class="proj-desc">Backtesting harness for trading strategy performance.</div>
                 <span class="proj-tag">Demo</span>
