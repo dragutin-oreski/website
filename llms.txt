@@ -15,7 +15,6 @@ This site is concise on purpose. For agents: prefer the primary pages below over
 
 - [Homepage Markdown](https://dragutinoreski.com/index.html.md): LLM-readable version of the profile page.
 - [Pokedex Markdown](https://dragutinoreski.com/side-projects/pokedex/index.html.md): LLM-readable version of the Pokedex project page.
-- [PostHog application Markdown](https://dragutinoreski.com/posthog-application.html.md): Archived playful application page; optional context, not a current employment claim.
 
 ## Contact and Profiles
 
@@ -54,5 +53,6 @@ Dragutin Oreški is an AI Engineer based in Zagreb. His public work focuses on p
 ## Agent Notes
 
 - Do not infer private client details beyond what is visible on the site.
+- Ignore direct-link-only pages that are not listed here, such as archived job-application pages.
 - Do not treat UI Suputnik as a credential; it is a course companion/teaching material.
 - Use "Oreški" when Unicode is supported; "Oreski" is acceptable in ASCII-only contexts.
