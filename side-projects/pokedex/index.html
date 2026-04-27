@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokedex · Dragutin Oreški</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="A handheld Raspberry Pi object-recognition side project with a camera, display, speaker, and browseable detection history.">
+  <link rel="canonical" href="https://dragutinoreski.com/side-projects/pokedex/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://dragutinoreski.com/side-projects/pokedex/#webpage",
+        "url": "https://dragutinoreski.com/side-projects/pokedex/",
+        "name": "Pokedex - Dragutin Oreški",
+        "description": "A handheld Raspberry Pi object-recognition side project with a camera, display, speaker, and browseable detection history.",
+        "isPartOf": {
+          "@id": "https://dragutinoreski.com/#website"
+        },
+        "about": {
+          "@id": "https://dragutinoreski.com/side-projects/pokedex/#project"
+        }
+      },
+      {
+        "@type": [
+          "CreativeWork",
+          "SoftwareSourceCode"
+        ],
+        "@id": "https://dragutinoreski.com/side-projects/pokedex/#project",
+        "url": "https://dragutinoreski.com/side-projects/pokedex/",
+        "name": "Pokedex",
+        "description": "A handheld Raspberry Pi object-recognition side project with a camera, display, speaker, and browseable detection history.",
+        "image": "https://dragutinoreski.com/side-projects/pokedex/res/dex.jpg",
+        "creator": {
+          "@id": "https://dragutinoreski.com/#person"
+        },
+        "codeRepository": "https://github.com/dragutin-oreski/pokedex",
+        "keywords": [
+          "Raspberry Pi",
+          "computer vision",
+          "OpenCV",
+          "object recognition",
+          "hardware prototype"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://dragutinoreski.com/#person",
+        "name": "Dragutin Oreški",
+        "url": "https://dragutinoreski.com/",
+        "sameAs": [
+          "https://github.com/dragutin-oreski",
+          "https://www.linkedin.com/in/dragutinoreski"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dragutinoreski.com/#website",
+        "url": "https://dragutinoreski.com/",
+        "name": "Dragutin Oreški"
+      }
+    ]
+  }
+  </script>
   <style>
     /* ── Shared design tokens ──────────────────────── */
     :root {
@@ -417,7 +477,7 @@
           <p>Press the main button. The Pi camera grabs a frame and runs it through an OpenCV DNN object detector with a 0.6 confidence threshold.</p>
         </li>
         <li>
-          <h4>Show & speak each new class</h4>
+          <h4>Show &amp; speak each new class</h4>
           <p>For every class it has never seen, the LCD shows a matching dex image and the speaker reads the name out loud via text-to-speech.</p>
         </li>
         <li>
@@ -500,7 +560,7 @@
     <!-- ── Links ──────────────────────────────────── -->
     <section class="section">
       <div class="section-head">
-        <h2>Links & credits</h2>
+        <h2>Links &amp; credits</h2>
         <span class="section-label">go deeper</span>
       </div>
       <div class="links-grid">

@@ -1,0 +1,47 @@
+# Dragutin Oreški
+
+> Personal website for Dragutin Oreški, an AI Engineer in Zagreb working on data-driven AI systems, private/local agents, RAG, multi-agent workflows, evaluation, observability, and practical AI learning materials.
+
+This site is concise on purpose. For agents: prefer the primary pages below over inferred summaries, keep claims grounded in visible page content, and use the contact links for outreach.
+
+## Primary URLs
+
+- Homepage / profile: https://dragutinoreski.com/
+- UI Suputnik course companion: https://dragutinoreski.com/courses/ui-suputnik/
+- Pokedex side project: https://dragutinoreski.com/side-projects/pokedex/
+- CV: https://dragutinoreski.com/dragutin_oreski_cv.pdf
+
+## Contact and Profiles
+
+- Email: mailto:dragutin.oreski@gmail.com
+- GitHub: https://github.com/dragutin-oreski
+- LinkedIn: https://www.linkedin.com/in/dragutinoreski
+
+## Current Work
+
+- Lead AI Engineer at QED Code since December 2024, building privacy-focused AI platforms with RAG and multi-agent systems.
+- Lecturer at Algebra Bernays in April 2026 for a 60-hour course on AI benefits and risks.
+- Currently exploring OpenClaw as a personal assistant, private/local model workflows, and internet-capable agents that can browse, verify sources, and return useful context.
+
+## Experience Snapshot
+
+- QED Code: Lead AI Engineer, December 2024 to present.
+- Freelancer / Upwork: AI Engineer, March 2024 to December 2024, building custom RAG and multi-agent systems.
+- Upp Agency: Co-founder, September 2023 to March 2024, focused on AI and data engineering.
+- CIAL Dun & Bradstreet: Data Engineer / Scientist, August 2017 to September 2023, working on distributed ELT pipelines and NLP solutions.
+
+## About
+
+Dragutin Oreški is an AI Engineer based in Zagreb. His public work focuses on practical AI systems, local/private agents, RAG, evaluation, observability, and teaching AI concepts.
+
+## Notable Site Sections
+
+- UI Suputnik: Croatian-language visual companion materials for an introductory artificial intelligence course.
+- Pokedex: a handheld Raspberry Pi object-recognition side project with camera, display, speaker, and browseable history.
+- Strategy analyzer: trading strategy performance demo at https://strategy.dragutinoreski.com/.
+
+## Agent Notes
+
+- Do not infer private client details beyond what is visible on the site.
+- Do not treat UI Suputnik as a credential; it is a course companion/teaching material.
+- Use "Oreški" when Unicode is supported; "Oreski" is acceptable in ASCII-only contexts.
