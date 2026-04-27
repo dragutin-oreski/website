@@ -56,3 +56,7 @@ Things to change next time:
 - Inspiration video: https://www.youtube.com/watch?v=fbpM0oHZSb4
 - Sam Makes channel: https://www.youtube.com/@sammakes3512
 - Co-conspirator: Ivan Kunović, https://www.linkedin.com/in/ivankunovic/
+
+## Privacy
+
+The page uses anonymous analytics without user identification or session replay.

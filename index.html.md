@@ -84,6 +84,7 @@ Agent-readable overview: https://dragutinoreski.com/llms.txt
 
 ## Notes for Agents
 
+- The site uses anonymous analytics without user identification or session replay.
 - Do not infer private client details beyond what is visible on the public site.
 - Do not treat UI Suputnik as a credential; it is a course companion/teaching material.
 - Use "Oreški" when Unicode is supported; "Oreski" is acceptable in ASCII-only contexts.
